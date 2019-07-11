@@ -180,11 +180,43 @@
 #shortInfo {
     position: relative;
     height: 10%;
+}
+
+#postName {
+    width: 80%;
+    height: 100%;
+    background: pink;
+    vertical-align: middle;
+}
+
+#postName p{
+    text-decoration: underline;
+    font-weight: 900;
+    text-align: center;
+}
+
+#closeBtnBlock {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 20%;
     background: white;
 }
 
+#closeBtnBlock a {
+    background: green;
+    display: block;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    top: 1rem;
+    margin: auto;
+    border-radius: 50px;
+}
+
 #description {
-    height: 70%;
+    height: 90%;
     background: green;
 }
 
