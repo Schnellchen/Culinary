@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Профиль</title>
+    <link rel="stylesheet" href="/css/base_style.css" />
+    <link rel="stylesheet" href="/css/profile_style.css" />
+    <link rel="stylesheet" href="/css/another_page.css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <div id="headerInner">
+                <nav id="topMenu">
+                    <div id="logo">
+                        <img alt="Culinary logo" src="/images/logo.png" alt="Блог" />
+                    </div>
+                    <!-- nav задает навигацию по сайту-->
+                    <ul>
+                        <li><a href="#">Главная</a></li> <!-- Ссылка по имени домашней страницы -->
+                        <li><a href="#">Меню</a></li>
+                        <li><a href="#">Разделы</a></li>
+                        <li><a href="#">Обсуждения</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="content">
+            <aside id="colLeft">
+                <!--{% block content %}-->
+                <div id="userInfoBlock">
+                    <div id="avatarBlock">
+                        <img id="avatarImg" src="/images/45476.jpg">
+                    </div>
+                    <div id="infoBlock">
+
+                        <div id="userNickname">
+                            Schnellchen
+                        </div>
+
+                        <div id="userStats">
+                            <div class="statsItem">
+                                <div class="statValue">500 тыс.</div>
+                                <div class="statName">Подписчиков</div>
+                            </div>
+                            <div class="statsItem">
+                                <div class="statValue">50 тыс.</div>
+                                <div class="statName">Подписок</div>
+                            </div>
+                            <div class="statsItem">
+                                <div class="statValue">50</div>
+                                <div class="statName">Рецептов</div>
+                            </div>
+                        </div>
+
+                        <div id="userBio">
+                            <b>О себе:</b><br>
+                            Мое имя - Дмитрий Пекарь. Спасибо матери с отцом, что родили пекарём.
+                            А так я просто поварь-кондитер. Не обращайте внимания на собак в профиле - они все сделаны из патоки!
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div id="userReceiptsBlock">
+
+                    <table id="userReceipts">
+                        <!-- Картинки-ссылки, как в инстаграмен-->
+                        <tr>
+                            <!-- Строка таблицы -->
+                            <td>
+                                <a href="#userPost">
+                                    <div class="userReceiptsItem"><img class="receiptsItemImg" src="/images/d9gpijMPIOQ.jpg"></div>
+                                </a>
+                            </td> <!-- Ячейки -->
+                            <td>
+                                <div class="userReceiptsItem"><img class="receiptsItemImg" src="/images/d9gpijMPIOQ.jpg"></div>
+                            </td>
+                            <td>
+                                <div class="userReceiptsItem"><img class="receiptsItemImg" src="/images/d9gpijMPIOQ.jpg"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <!-- Строка таблицы -->
+                            <td>
+                                <div class="userReceiptsItem"><img class="receiptsItemImg" src="/images/d9gpijMPIOQ.jpg"></div>
+                            </td> <!-- Ячейки -->
+                            <td>
+                                <div class="userReceiptsItem"><img class="receiptsItemImg" src="/images/d9gpijMPIOQ.jpg"></div>
+                            </td>
+                            <td>
+                                <div class="userReceiptsItem"><img class="receiptsItemImg" src="/images/d9gpijMPIOQ.jpg"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <!-- Строка таблицы -->
+                            <td>
+                                <div class="userReceiptsItem"><img class="receiptsItemImg" src="/images/d9gpijMPIOQ.jpg"></div>
+                            </td> <!-- Ячейки -->
+                            <td>
+                                <div class="userReceiptsItem"><img class="receiptsItemImg" src="/images/d9gpijMPIOQ.jpg"></div>
+                            </td>
+                            <td>
+                                <div class="userReceiptsItem"><img class="receiptsItemImg" src="/images/d9gpijMPIOQ.jpg"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <!-- Строка таблицы -->
+                            <td>
+                                <div class="userReceiptsItem"><img class="receiptsItemImg" src="/images/d9gpijMPIOQ.jpg"></div>
+                            </td> <!-- Ячейки -->
+                            <td>
+                                <div class="userReceiptsItem"><img class="receiptsItemImg" src="/images/d9gpijMPIOQ.jpg"></div>
+                            </td>
+                            <td>
+                                <div class="userReceiptsItem"><img class="receiptsItemImg" src="/images/d9gpijMPIOQ.jpg"></div>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+                <!--{% endblock %}-->
+            </aside>
+
+            <aside id="colRight">
+
+                <form id="search" method="get" action="/search" target="_blank">
+                    <input name="q" id="searchInpt" value="" placeholder="Поиск...">
+                    <input id="searchBtn" type=submit value="Найти" src="/images/searchIcon.png">
+                </form>
+
+                <div id="sideBar">
+                    <div id="sideBarHeader">
+                        <h1>Последние рецепты</h1>
+                    </div>
+                    <ul>
+                        <li><a href="#" title="Рецепт чего то там">Рецепт абдулахмаша</a></li>
+                        <li><a href="#" title="Собака">Вкусные печеные пальчики</a></li>
+                        <li><a href="#" title="по-корейски">Душевное варенье</a></li>
+                        <li><a href="#" title="Собака по-корейски">Необычные кухонные принадлежности</a></li>
+                        <li><a href="#" title="Сокорейски">Тут инфа разная классная. Заглядывайте сюда почаще! Спасибо!</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <div id="userPost" class="modalbackground">
+                <div class="modalwindow">
+                    <div id="userPostImg">
+                        <img class="postImg" src="/images/Operation_Crossroads_Baker_(wide).jpg">
+                    </div>
+                    <div id="postDescription">
+                        <div id="description">
+                            Тут очень вкусное жаркое, приготовленное методом деления атомов урана!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="footer">
+            <div id="lowerLogo">
+                <img alt="Lower logo" src="/images/logo2.png" width="150" height="150" alt="Блог" />
+            </div>
+            <div id="footerInner">
+                <div id="footerInfo">
+                    <p>Schnellchen (c)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

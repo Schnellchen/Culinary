@@ -1,0 +1,353 @@
+#homePreview {
+    position: relative;
+    min-height: 100%;
+    width: 1200px;
+    max-width: 100%;
+}
+
+.boxHeader {
+    position: relative;
+    width: 1200px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.boxHeader h2 {
+    /* Шрифты в порядке предпочтения, на случай, если указаного шрифта не будет */
+    line-height: 1.5;
+    /* Межстрочный интервал */
+    color: #a02a63;
+}
+
+#collage {
+    margin-top: 6rem;
+    position: relative;
+    max-width: 100%;
+    width: 1200px;
+    min-height: 500px;
+    padding-bottom: 3rem;
+    background: none;
+}
+
+#collage img {
+    position: absolute;
+    width: 33%;
+    max-width: 400px;
+    box-shadow: 2px 2px 30px;
+    -webkit-transition: box-shadow 0.5s, -webkit-transform 0.5s ease-in-out;
+    /* Плавное возвращение */
+}
+
+/* nth-child в своем цикле считает все элементы, находящиеся на одном уровне вложенности относительно родительского элемента. */
+
+#collage img:nth-child(1) {
+    /* 1 потомок img в pictureBox */
+    z-index: 2;
+    top: 15%;
+    left: 29%;
+    -webkit-transform: rotate(5deg)
+}
+
+#collage img:nth-child(2) {
+    z-index: 1;
+    left: 60%;
+    -webkit-transform: rotate(-18deg)
+}
+
+#collage img:nth-child(3) {
+    z-index: 2;
+    left: 65%;
+    top: 25%;
+    -webkit-transform: rotate(-8deg)
+}
+
+#collage img:nth-child(4) {
+    z-index: 1;
+    left: 3%;
+    top: 45%;
+    -webkit-transform: rotate(-30deg);
+}
+
+#collage img:nth-child(5) {
+    z-index: 2;
+    left: 60%;
+    top: 50%;
+    -webkit-transform: rotate(15deg);
+}
+
+#collage img:nth-child(6) {
+    z-index: 2;
+    left: 2%;
+    top: 0%;
+    -webkit-transform: rotate(-4deg);
+}
+
+#collage img:nth-child(7) {
+    z-index: 2;
+    left: 30%;
+    top: 60%;
+    -webkit-transform: rotate(4deg);
+}
+
+#collage img:hover {
+    /* Плавное возвращение при наведении */
+    -webkit-transition: box-shadow 0.5s, -webkit-transform 0.5s ease-in-out;
+    -webkit-transform: rotate(0);
+    -webkit-transform: scale(1.5, 1.5);
+    z-index: 50;
+    box-shadow: 10px 15px 30px;
+    /* Тени, смещение по X и Y, степень размытия,цвет */
+}
+
+#previewFeed {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    margin-top: 10%;
+    /* Считается от ширины блока у которого не задана высота? */
+}
+
+.previewBox {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    /* Фиксированная высота тк потомки вырваны из потока */
+    background: #fff7b9;
+    background: 0;
+}
+
+.pictureBox {
+    width: 50%;
+    overflow: hidden;
+    vertical-align: top;
+    background: 0;
+}
+
+.pictureBox img {
+    width: 100%;
+    border-radius: 10%;
+}
+
+.wordBox {
+    width: 45%;
+    vertical-align: top;
+    background: 0;
+}
+
+.wordBox img {
+    width: 100%;
+    pointer-events: none;
+    /* Предотвращает события мыши и щелчки по элементу(для запрета перетаскивания) */
+}
+
+.previewBox:nth-child(odd) .wordBox {
+    float: right;
+}
+
+.previewBox:nth-child(odd) .pictureBox {
+    float: left;
+}
+
+.previewBox:nth-child(even) .pictureBox {
+    float: right;
+}
+
+.previewBox:nth-child(even) .wordBox {
+    float: left;
+}
+
+#authBlock {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    background: 0;
+}
+
+#leftSide {
+    position: relative;
+    width: 50%;
+    top: 25%;
+    /* Вычисляется по верхней границе. Высота 50% => чтобы сдвинуть на половину нужно 25%*/
+}
+
+#regOffer {
+    position: relative;
+    width: 90%;
+    height: 100px;
+    border-radius: 75px;
+    top: 40%;
+    margin: auto;
+}
+
+#rightSide {
+    position: relative;
+    width: 50%;
+    left: 50%;
+}
+
+#rightList {
+    list-style-position: inside;
+    /* Маркеры внутри блока*/
+}
+
+#rightList li {
+    padding-top: 7%;
+    padding-bottom: 7%;
+    font-size: 1.6rem;
+}
+
+#botSide {
+    position: relative;
+    width: 100%;
+}
+
+#botText {
+    position: relative;
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+#botText p {
+    font-size: 3.125rem;
+}
+
+#logOffer {
+    position: relative;
+    width: 60%;
+    border-radius: 75px;
+    margin: auto;
+}
+
+.authBtn {
+    position: relative;
+    display: block;
+    font-size: 2rem;
+    width: 100%;
+    padding-top: 5%;
+    /* Зависит от ширины */
+    padding-bottom: 4%;
+    border-radius: inherit;
+    text-decoration: none;
+    color: white;
+    background: #00CC00;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    #collage img {
+        position: absolute;
+        width: 33.3%;
+        box-shadow: none;
+        -webkit-transition: none;
+    }
+
+    #collage img:hover {
+        /* Плавное возвращение при наведении */
+        -webkit-transition: none;
+        -webkit-transform: none;
+        -webkit-transform: none;
+        z-index: 1;
+        box-shadow: none;
+        /* Тени, смещение по X и Y, степень размытия,цвет */
+    }
+
+    /* nth-child в своем цикле считает все элементы, находящиеся на одном уровне вложенности относительно родительского элемента. */
+
+    #collage img:nth-child(1) {
+        /* 1 потомок img в pictureBox */
+        z-index: 1;
+        top: 0;
+        left: 0;
+        -webkit-transform: none;
+
+    }
+
+    #collage img:nth-child(2) {
+        z-index: 1;
+        top: 0;
+        left: 33.3%;
+        -webkit-transform: none;
+    }
+
+    #collage img:nth-child(3) {
+        z-index: 1;
+        left: 66.6%;
+        top: 0;
+        -webkit-transform: none;
+    }
+
+    #collage img:nth-child(4) {
+        z-index: 1;
+        top: 70%;
+        left: 0;
+        -webkit-transform: none;
+    }
+
+    #collage img:nth-child(5) {
+        z-index: 3;
+        top: 35%;
+        left: 33.3%;
+        -webkit-transform: none;
+    }
+
+    #collage img:nth-child(6) {
+        z-index: 3;
+        top: 70%;
+        left: 66.6%;
+        -webkit-transform: none;
+    }
+
+    #collage img:nth-child(7) {
+        z-index: 3;
+        top: 70%;
+        left: 33.3%;
+        -webkit-transform: none;
+    }
+
+
+    .previewBox {
+        height: 1700px;
+    }
+
+    .pictureBox {
+        width: 100%;
+    }
+
+    .pictureBox img {
+        width: 100%;
+        border-radius: 10%;
+    }
+
+    .wordBox {
+        width: 100%;
+    }
+
+    .wordBox img {
+        width: 100%;
+        pointer-events: none;
+        /* Предотвращает события мыши и щелчки по элементу(для запрета перетаскивания) */
+    }
+
+    .previewBox:nth-child .pictureBox,
+    .wordBox {
+        float: none;
+    }
+
+    #rightList li {
+        padding-top: 7%;
+        padding-bottom: 7%;
+        font-size: 1rem;
+    }
+
+    .authBtn {
+        font-size: inherit;
+    }
+
+    #botText p {
+        font-size: 2rem;
+    }
+
+}

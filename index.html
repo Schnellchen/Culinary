@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Добро пожаловать!</title>
+    <!--<link rel="stylesheet" href="/Culinary/css/base_style.css" />
+    <link rel="stylesheet" href="/Culinary/css/home_style.css" />-->
+    <style type="text/css">
+     /* Для того, чтобы блок рос по содержимому, необходимо убрать ему высоту */
+
+* {
+    /* Пока хз что это, но оно позволяет шапке лежать ровно */
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    min-height: 100%;
+    width: 100%;
+    font-size: 16px;
+}
+
+nav,
+footer,
+header,
+section {
+    display: block;
+    /* Элементы показываются как блочные сверху-вниз */
+}
+
+h1,
+h2,
+p,
+ul li,
+a {
+    word-wrap: break-word;
+    /* Перенос длинных слов */
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+body {
+    /* Общий стиль для тега body */
+    width: 100%;
+    min-height: 100%;
+    color: #333;
+    /* Элементы показываются как блочные сверху-вниз */
+    background: #fff7c2;
+    Цвет фона */ font-family: "Times New Roman", serif;
+    /*станавливает семейство шрифта, которое будет использоваться для оформления текста содержимого */
+}
+
+#wrapper {
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+    margin: auto;
+    border: 0px solid black;
+}
+
+#header {
+    position: absolute;
+    /* Абсолюнтое позиционирование задает место от краев браузера(Родитель - тег body)*/
+    background: #ffa258;
+    width: 100%;
+    height: 4rem;
+    z-index: 100;
+    left: 0;
+    top: 0;
+}
+
+#headerInner {
+    position: relative;
+    width: 1200px;
+    max-width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+#logo {
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    border: 0px solid #000;
+    top: 10%;
+    /* При позиции Absolute элемент позиционируется от элемента с позицией relative */
+}
+
+#logo img {
+    width: 100%;
+    height: 100%;
+}
+
+#topMenu {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#topMenu ul {
+    margin-left: 150px;
+    padding: 0;
+    /* Чтобы убрать поля вокруг списка */
+    list-style: none;
+    /*Запрет маркеров для тегов списков */
+}
+
+#topMenu ul li {
+    float: left;
+    width: 7rem;
+    height: 100%;
+}
+
+#topMenu ul li a {
+    display: block;
+    text-align: center;
+    /* Применяется только для блочных элементов. Выравнивание по горизонтали */
+    color: #a02a63;
+    text-decoration: none;
+    padding-top: 1.5rem;
+    width: 100%;
+    padding-bottom: 1.4rem;
+}
+
+#topMenu ul li:hover {
+    background-color: #fff7c2;
+}
+
+#content {
+    position: relative;
+    width: 1200px;
+    max-width: 100%;
+    min-height: 100%;
+    margin: auto;
+    /* Одинаковые отступы слева и справа */
+    padding-top: 5rem;
+    border: 0px solid #000;
+    padding-bottom: 5rem;
+}
+
+#footer {
+    position: absolute;
+    background: #ffa258;
+    width: 100%;
+    height: 3rem;
+    bottom: 0;
+}
+
+#lowerLogo {
+    position: absolute;
+    right: 0;
+    bottom: 3rem;
+    width: 150px;
+}
+
+#footerInner {
+    position: relative;
+    width: 1200px;
+    max-width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+#footerInfo {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+}
+
+@media screen and (max-width: 1000px) {
+
+    html {
+        font-size: 32px;
+    }
+
+    #logo {
+        display: none
+    }
+
+    #topMenu ul {
+        margin-left: 0;
+    }
+
+    #topMenu ul li {
+        width: 25%;
+    }
+
+}
+
+
+       #colLeft {
+    position: relative;
+    border: 0px solid #000;
+    width: auto;
+    min-height: 500px;
+    padding-bottom: 100px;
+    /*background: blue;
+    */
+}
+
+#homePreview {
+    position: relative;
+    min-height: 100%;
+    width: 1200px;
+    max-width: 100%;
+}
+
+.boxHeader {
+    position: relative;
+    width: 1200px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.boxHeader h2 {
+    /* Шрифты в порядке предпочтения, на случай, если указаного шрифта не будет */
+    line-height: 1.5;
+    /* Межстрочный интервал */
+    color: #a02a63;
+}
+
+#collage {
+    margin-top: 6rem;
+    position: relative;
+    max-width: 100%;
+    width: 1200px;
+    min-height: 500px;
+    padding-bottom: 3rem;
+    background: 0;
+}
+
+#collage img {
+    position: absolute;
+    width: 33%;
+    max-width: 400px;
+    box-shadow: 2px 2px 30px;
+    -webkit-transition: box-shadow 0.5s, -webkit-transform 0.5s ease-in-out;
+    /* Плавное возвращение */
+}
+
+/* nth-child в своем цикле считает все элементы, находящиеся на одном уровне вложенности относительно родительского элемента. */
+
+#collage img:nth-child(1) {
+    /* 1 потомок img в pictureBox */
+    z-index: 2;
+    top: 15%;
+    left: 29%;
+    -webkit-transform: rotate(5deg)
+}
+
+#collage img:nth-child(2) {
+    z-index: 1;
+    left: 60%;
+    -webkit-transform: rotate(-18deg)
+}
+
+#collage img:nth-child(3) {
+    z-index: 2;
+    left: 65%;
+    top: 25%;
+    -webkit-transform: rotate(-8deg)
+}
+
+#collage img:nth-child(4) {
+    z-index: 1;
+    left: 3%;
+    top: 45%;
+    -webkit-transform: rotate(-30deg);
+}
+
+#collage img:nth-child(5) {
+    z-index: 2;
+    left: 60%;
+    top: 50%;
+    -webkit-transform: rotate(15deg);
+}
+
+#collage img:nth-child(6) {
+    z-index: 2;
+    left: 2%;
+    top: 0%;
+    -webkit-transform: rotate(-4deg);
+}
+
+#collage img:nth-child(7) {
+    z-index: 2;
+    left: 30%;
+    top: 60%;
+    -webkit-transform: rotate(4deg);
+}
+
+#collage img:hover {
+    /* Плавное возвращение при наведении */
+    -webkit-transition: box-shadow 0.5s, -webkit-transform 0.5s ease-in-out;
+    -webkit-transform: rotate(0);
+    -webkit-transform: scale(1.5, 1.5);
+    z-index: 50;
+    box-shadow: 10px 15px 30px;
+    /* Тени, смещение по X и Y, степень размытия,цвет */
+}
+
+#previewFeed {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    margin-top: 10%;
+    /* Считается от ширины блока у которого не задана высота? */
+}
+
+.previewBox {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    /* Фиксированная высота тк потомки вырваны из потока */
+    background: #fff7b9;
+    background: 0;
+}
+
+.pictureBox {
+    width: 50%;
+    overflow: hidden;
+    vertical-align: top;
+    background: 0;
+}
+
+.pictureBox img {
+    width: 100%;
+    border-radius: 10%;
+}
+
+.wordBox {
+    width: 45%;
+    vertical-align: top;
+    background: 0;
+}
+
+.wordBox img {
+    width: 100%;
+    pointer-events: none;
+    /* Предотвращает события мыши и щелчки по элементу(для запрета перетаскивания) */
+}
+
+.previewBox:nth-child(odd) .wordBox {
+    float: right;
+}
+
+.previewBox:nth-child(odd) .pictureBox {
+    float: left;
+}
+
+.previewBox:nth-child(even) .pictureBox {
+    float: right;
+}
+
+.previewBox:nth-child(even) .wordBox {
+    float: left;
+}
+
+#authBlock {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    background: 0;
+}
+
+#leftSide {
+    position: relative;
+    width: 50%;
+    top: 25%;
+    /* Вычисляется по верхней границе. Высота 50% => чтобы сдвинуть на половину нужно 25%*/
+}
+
+#regOffer {
+    position: relative;
+    width: 90%;
+    height: 100px;
+    border-radius: 75px;
+    top: 40%;
+    margin: auto;
+}
+
+#rightSide {
+    position: relative;
+    width: 50%;
+    left: 50%;
+}
+
+#rightList {
+    list-style-position: inside;
+    /* Маркеры внутри блока*/
+}
+
+#rightList li {
+    padding-top: 7%;
+    padding-bottom: 7%;
+    font-size: 1.6rem;
+}
+
+#botSide {
+    position: relative;
+    width: 100%;
+}
+
+#botText {
+    position: relative;
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+#botText p {
+    font-size: 40pt;
+}
+
+#logOffer {
+    position: relative;
+    width: 60%;
+    border-radius: 75px;
+    margin: auto;
+}
+
+.authBtn {
+    position: relative;
+    display: block;
+    font-size: 25pt;
+    width: 100%;
+    padding-top: 5%;
+    /* Зависит от ширины */
+    padding-bottom: 4%;
+    border-radius: inherit;
+    text-decoration: none;
+    color: white;
+    background: #00CC00;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+     #collage img {
+        position: absolute;
+        width: 33.3%;
+        box-shadow: none;
+        -webkit-transition: none;
+    }
+
+    #collage img:hover {
+        /* Плавное возвращение при наведении */
+        -webkit-transition: none;
+        -webkit-transform: none;
+        -webkit-transform: none;
+        z-index: 1;
+        box-shadow: none;
+        /* Тени, смещение по X и Y, степень размытия,цвет */
+    }
+
+    /* nth-child в своем цикле считает все элементы, находящиеся на одном уровне вложенности относительно родительского элемента. */
+
+    #collage img:nth-child(1) {
+        /* 1 потомок img в pictureBox */
+        z-index: 1;
+        top: 0;
+        left: 0;
+        -webkit-transform: none;
+
+    }
+
+    #collage img:nth-child(2) {
+        z-index: 1;
+        top: 0;
+        left: 33.3%;
+        -webkit-transform: none;
+    }
+
+    #collage img:nth-child(3) {
+        z-index: 1;
+        left: 66.6%;
+        top: 0;
+        -webkit-transform: none;
+    }
+
+    #collage img:nth-child(4) {
+        z-index: 1;
+        top: 70%;
+        left: 0;
+        -webkit-transform: none;
+    }
+
+    #collage img:nth-child(5) {
+        z-index: 3;
+        top: 35%;
+        left: 33.3%;
+        -webkit-transform: none;
+    }
+
+    #collage img:nth-child(6) {
+        z-index: 3;
+        top: 70%;
+        left: 66.6%;
+        -webkit-transform: none;
+    }
+
+    #collage img:nth-child(7) {
+        z-index: 3;
+        top: 70%;
+        left: 33.3%;
+        -webkit-transform: none;
+    }
+
+    .previewBox {
+        height: 1700px;
+    }
+
+    .pictureBox {
+        width: 100%;
+    }
+
+    .pictureBox img {
+        width: 100%;
+        border-radius: 10%;
+    }
+
+    .wordBox {
+        width: 100%;
+    }
+
+    .wordBox img {
+        width: 100%;
+        pointer-events: none;
+        /* Предотвращает события мыши и щелчки по элементу(для запрета перетаскивания) */
+    }
+
+    .previewBox:nth-child .pictureBox,
+    .wordBox {
+        float: none;
+    }
+
+    #rightList li {
+        padding-top: 7%;
+        padding-bottom: 7%;
+        font-size: 1rem;
+    }
+
+
+
+}
+
+
+    </style>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <div id="headerInner">
+                <nav id="topMenu">
+                    <div id="logo">
+                        <img alt="Culinary logo" src="/Culinary/images/logo.png" alt="Блог" />
+                    </div>
+                    <!-- nav задает навигацию по сайту-->
+                    <ul>
+                        <li><a href="home.html">Главная</a></li> <!-- Ссылка по имени домашней страницы -->
+                        <li><a href="#">Меню</a></li>
+                        <li><a href="#">Разделы</a></li>
+                        <li><a href="#">Обсуждения</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="content">
+            <!--{% block content %}-->
+            <div id="homePreview">
+                <div class=boxHeader>
+                    <h2>Всегда хотели стать шеф-поваром? Или же просто хотите удивить родных и близких изысканными блюдами?</h2>
+                </div>
+                <div id="collage">
+                    <img alt="Dish image" src="/Culinary/images/dish1.jpg" />
+                    <img alt="Dish image" src="/Culinary/images/dish2.jpg" />
+                    <img alt="Dish image" src="/Culinary/images/dish3.jpg" />
+                    <img alt="Dish image" src="/Culinary/images/dish4.jpg" />
+                    <img alt="Dish image" src="/Culinary/images/dish5.jpg" />
+                    <img alt="Dish image" src="/Culinary/images/dish6.jpg" />
+                    <img alt="Dish image" src="/Culinary/images/dish7.jpg" />
+                </div>
+                <div id='previewFeed'>
+                    <div class="previewBox">
+                        <div class="pictureBox">
+                            <img alt="Картинка с поваром" src="/Culinary/images/cook1.jpg" />
+                        </div>
+                        <div class="wordBox">
+                            <img alt="Картинка с мудростью" src="/Culinary/images/note42.png" />
+                        </div>
+                    </div>
+                    <div class="previewBox">
+                        <div class="wordBox">
+                            <img alt="Картинка с мудростью" src="/Culinary/images/note62.png" />
+                        </div>
+                        <div class="pictureBox">
+                            <img alt="Картинка с поваром" src="/Culinary/images/cook2.jpg" />
+                        </div>
+                    </div>
+                    <div class="previewBox">
+                        <div class="pictureBox">
+                            <img alt="Картинка с поваром" src="/Culinary/images/cook3.jpg" />
+                        </div>
+                        <div class="wordBox">
+                            <img alt="Картинка с мудростью" src="/Culinary/images/note72.png" />
+                        </div>
+                    </div>
+                </div>
+                <div id="authBlock">
+                    <div id="leftSide">
+                        <div id="regOffer">
+                            <a class="authBtn" href="#">Зарегистрироваться</a>
+                        </div>
+                    </div>
+                    <div id="rightSide">
+                        <ul id="rightList">
+                            <li>Возможность следить за любимыми кулинарами</li>
+                            <li>Возможность создавать собственные рецепты</li>
+                            <li>Возможность участвовать в обсуждениях</li>
+                            <li>Вообще это круто. Регистрируйся, вот.</li>
+                        </ul>
+                    </div>
+                    <div id="botSide">
+                        <div id="botText">
+                            <p>Уже есть профиль?</p>
+                        </div>
+                        <div id="logOffer">
+                            <a class="authBtn" href="#">Войти</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--{% endblock %}-->
+        </div>
+        <div id="footer">
+            <div id="lowerLogo">
+                <img alt="Lower logo" src="/Culinary/images/logo2.png" width="150" height="150" alt="Блог" />
+            </div>
+            <div id="footerInner">
+                <a href="#">Наверх</a>
+                <div id="footerInfo">
+                    <p>Schnellchen (c)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

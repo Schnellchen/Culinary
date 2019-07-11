@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Добро пожаловать!</title>
+    <link rel="stylesheet" href="/css/base_style.css" />
+    <link rel="stylesheet" href="/css/intro_style.css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <div id="headerInner">
+                <nav id="topMenu">
+                    <div id="logo">
+                        <img alt="Culinary logo" src="/images/logo.png" alt="Блог" />
+                    </div>
+                    <!-- nav задает навигацию по сайту-->
+                    <ul>
+                        <li><a href="#">Главная</a></li> <!-- Ссылка по имени домашней страницы -->
+                        <li><a href="#">Меню</a></li>
+                        <li><a href="#">Разделы</a></li>
+                        <li><a href="#">Обсуждения</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="content">
+            <!--{% block content %}-->
+            <div id="homePreview">
+                <div class=boxHeader>
+                    <h2>Всегда хотели стать шеф-поваром? Или же просто хотите удивить родных и близких изысканными блюдами? Добро пожаловать на Culinary.ru!</h2>
+                </div>
+                <div id="collage">
+                    <img alt="Dish image" src="/images/dish1.jpg" />
+                    <img alt="Dish image" src="/images/dish2.jpg" />
+                    <img alt="Dish image" src="/images/dish3.jpg" />
+                    <img alt="Dish image" src="/images/dish4.jpg" />
+                    <img alt="Dish image" src="/images/dish5.jpg" />
+                    <img alt="Dish image" src="/images/dish6.jpg" />
+                    <img alt="Dish image" src="/images/dish7.jpg" />
+                </div>
+                <div id='previewFeed'>
+                    <div class="previewBox">
+                        <div class="pictureBox">
+                            <img alt="Картинка с поваром" src="/images/cook1.jpg" />
+                        </div>
+                        <div class="wordBox">
+                            <img alt="Картинка с мудростью" src="/images/note42.png" />
+                        </div>
+                    </div>
+                    <div class="previewBox">
+                        <div class="wordBox">
+                            <img alt="Картинка с мудростью" src="/images/note62.png" />
+                        </div>
+                        <div class="pictureBox">
+                            <img alt="Картинка с поваром" src="/images/cook2.jpg" />
+                        </div>
+                    </div>
+                    <div class="previewBox">
+                        <div class="pictureBox">
+                            <img alt="Картинка с поваром" src="/images/cook3.jpg" />
+                        </div>
+                        <div class="wordBox">
+                            <img alt="Картинка с мудростью" src="/images/note72.png" />
+                        </div>
+                    </div>
+                </div>
+                <div id="authBlock">
+                    <div id="leftSide">
+                        <div id="regOffer">
+                            <a class="authBtn" href="#">Зарегистрироваться</a>
+                        </div>
+                    </div>
+                    <div id="rightSide">
+                        <ul id="rightList">
+                            <li>Возможность следить за любимыми кулинарами</li>
+                            <li>Возможность создавать собственные рецепты</li>
+                            <li>Возможность участвовать в обсуждениях</li>
+                            <li>Вообще это круто. Регистрируйся, вот.</li>
+                        </ul>
+                    </div>
+                    <div id="botSide">
+                        <div id="botText">
+                            <p>Уже есть профиль?</p>
+                        </div>
+                        <div id="logOffer">
+                            <a class="authBtn" href="/templates/login.html">Войти</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--{% endblock %}-->
+        </div>
+        <div id="footer">
+            <div id="lowerLogo">
+                <img alt="Lower logo" src="/images/logo2.png" width="150" height="150" alt="Блог" />
+            </div>
+            <div id="footerInner">
+                <div id="footerInfo">
+                    <p>Schnellchen (c)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

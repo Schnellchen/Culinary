@@ -1,0 +1,227 @@
+#userInfoBlock {
+    position: relative;
+    height: 15.625rem;
+    /* background: #fff7c2; */
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+#avatarBlock {
+    float: left;
+    height: inherit;
+    width: 30%;
+}
+
+#avatarImg {
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    border-radius: 100px;
+    /* Радиус скругления */
+    border: 3px solid black;
+    /* Параметры рамки */
+    box-shadow: 0 0 7px #666;
+    /* Параметры тени */
+}
+
+#infoBlock {
+    float: right;
+    height: inherit;
+    width: 70%;
+}
+
+#userNickname {
+    height: 20%;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+#userStats {
+    height: 20%;
+    font-weight: 900;
+}
+
+.statsItem {
+    display: inline-block;
+    width: 6rem;
+    height: 100%;
+    font-size: 1, 25rem;
+    margin-left: 3, 125rem;
+}
+
+.statName {
+    text-align: center;
+    height: 50%;
+}
+
+.statValue {
+    text-align: center;
+    height: 50%;
+
+}
+
+#userBio b {
+    font-size: 1, 25rem;
+}
+
+#userBio {
+    height: 50%;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+#userReceiptsBlock {
+    width: 52.5rem;
+    background: ;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+#userReceipts {
+    min-height: 11.9rem;
+    width: 100%;
+    background: ;
+
+}
+
+#userReceipts tr {
+    background: ;
+}
+
+#userReceipts td {
+    background: ;
+    padding-bottom: 20px;
+}
+
+.userReceiptsItem {
+    background: ;
+    width: 11.9rem;
+    height: 11.9rem;
+    margin: auto;
+}
+
+.receiptsItemImg {
+    width: 100%;
+    height: 100%;
+}
+
+
+.modalbackground
+
+/* Затемненный фон */
+    {
+    margin: 0;
+    /* убираем отступы */
+    padding: 0;
+    /* убираем отступы */
+    position: fixed;
+    /* фиксируем положение */
+    top: 0;
+    /* растягиваем блок по всему экрану */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* background: rgba(0,0,0,0.5); полупрозрачный цвет фона */
+    z-index: 100;
+    /* выводим фон поверх всех слоев на странице браузера */
+    opacity: 0;
+    /* Делаем невидимым */
+    pointer-events: none;
+    /* элемент невидим для событий мыши */
+}
+
+/* Отображение модального окна. Псевдокласс target - целевой элемент вызывается через id по ссылке*/
+.modalbackground:target {
+    opacity: 1;
+    /* делаем окно видимым */
+    pointer-events: auto;
+    /* элемент видим для событий мыши */
+}
+
+/* Само диалоговое окно*/
+.modalwindow {
+    vertical-align: top;
+    position: relative;
+    width: 50%;
+    height: 70%;
+    margin: auto;
+    margin-top: 5%;
+    background: white;
+}
+
+
+
+#userPostImg {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    background: orange;
+    top: 0;
+    left: 0;
+}
+
+.postImg {
+    width: 100%;
+    height: 100%;
+}
+
+#postDescription {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background: yellow;
+    top: 0;
+    right: 0;
+}
+
+#shortInfo {
+    position: relative;
+    height: 10%;
+    background: white;
+}
+
+#description {
+    height: 70%;
+    background: green;
+}
+
+@media screen and (max-width: 1000px) {
+    #userInfoBlock {
+        width: 100%;
+    }
+
+    #userReceiptsBlock {
+        width: 100%;
+    }
+
+    #userReceipts td {
+        padding-bottom: 0px;
+    }
+
+    .userReceiptsItem {
+        background: ;
+        width: 95%;
+        height: 10rem;
+    }
+
+    .receiptsItemImg {
+        width: 100%;
+        height: 95%;
+    }
+    
+    .modalwindow {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: white;
+    }
+    
+    .postImg {
+    width: 100%;
+    height: 50%;
+    margin-top: 50%;
+}
+}

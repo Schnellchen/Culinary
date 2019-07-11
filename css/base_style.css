@@ -1,0 +1,184 @@
+/* Для того, чтобы блок рос по содержимому, необходимо убрать ему высоту */
+
+* {
+    /* Пока хз что это, но оно позволяет шапке лежать ровно */
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    min-height: 100%;
+    width: 100%;
+    font-size: 16px;
+}
+
+nav,
+footer,
+header,
+section {
+    display: block;
+    /* Элементы показываются как блочные сверху-вниз */
+}
+
+h1,
+h2,
+p,
+ul li,
+a,
+b {
+    word-wrap: break-word;
+    /* Перенос длинных слов */
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+body {
+    /* Общий стиль для тега body */
+    width: 100%;
+    min-height: 100%;
+    color: #333;
+    /* Элементы показываются как блочные сверху-вниз */
+    background: #fff7c2;
+    font-family: "Times New Roman", serif;
+    /*станавливает семейство шрифта, которое будет использоваться для оформления текста содержимого */
+}
+
+#wrapper {
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+    margin: auto;
+    border: 0px solid black;
+}
+
+#header {
+    position: absolute;
+    /* Абсолюнтое позиционирование задает место от краев браузера(Родитель - тег body)*/
+    background: #ffa258;
+    width: 100%;
+    height: 4rem;
+    z-index: 100;
+    left: 0;
+    top: 0;
+}
+
+#headerInner {
+    position: relative;
+    width: 1200px;
+    max-width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+#logo {
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    border: 0px solid #000;
+    top: 10%;
+    /* При позиции Absolute элемент позиционируется от элемента с позицией relative */
+}
+
+#logo img {
+    width: 100%;
+    height: 100%;
+}
+
+#topMenu {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#topMenu ul {
+    margin-left: 150px;
+    padding: 0;
+    /* Чтобы убрать поля вокруг списка */
+    list-style: none;
+    /*Запрет маркеров для тегов списков */
+}
+
+#topMenu ul li {
+    float: left;
+    width: 7rem;
+    height: 100%;
+}
+
+#topMenu ul li a {
+    display: block;
+    text-align: center;
+    /* Применяется только для блочных элементов. Выравнивание по горизонтали */
+    color: #a02a63;
+    text-decoration: none;
+    padding-top: 1.5rem;
+    width: 100%;
+    padding-bottom: 1.4rem;
+}
+
+#topMenu ul li:hover {
+    background-color: #fff7c2;
+}
+
+#content {
+    position: relative;
+    width: 1200px;
+    max-width: 100%;
+    min-height: 100%;
+    margin: auto;
+    /* Одинаковые отступы слева и справа */
+    padding-top: 5rem;
+    border: 0px solid #000;
+    padding-bottom: 5rem;
+    background: ;
+}
+
+#footer {
+    position: absolute;
+    background: #ffa258;
+    width: 100%;
+    height: 3rem;
+    bottom: 0;
+}
+
+#lowerLogo {
+    position: absolute;
+    right: 0;
+    bottom: 3rem;
+    width: 150px;
+}
+
+#footerInner {
+    position: relative;
+    width: 1200px;
+    max-width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+#footerInfo {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    top: 25%;
+}
+
+@media screen and (max-width: 1000px) {
+
+    html {
+        font-size: 32px;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #topMenu ul {
+        margin-left: 0;
+    }
+
+    #topMenu ul li {
+        width: 25%;
+    }
+
+}

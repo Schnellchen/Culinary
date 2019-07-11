@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/base_style.css" />
+    <link rel="stylesheet" href="/css/another_page.css" />
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <header id="header">
+
+            <div id="headerInner">
+                <div id="logo">
+                    <img src="/images/logo.png" width="150" height="50" alt="Блог" />
+                </div>
+                <nav id="topMenu">
+                    <ul>
+                        <li><a href="#">Главная</a></li> <!-- Ссылка по имени домашней страницы -->
+                        <li><a href="#">Меню</a></li>
+                        <li><a href="#">Разделы</a></li>
+                        <li><a href="#">Обсуждения</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <div id="content">
+
+            <div id="colLeft">
+                {% block content %}
+
+                {% endblock %}
+            </div>
+            <aside id="colRight">
+
+                <form id="search" method="get" action="/search" target="_blank">
+                    <input name="q" id="searchInpt" value="" placeholder="Поиск...">
+                    <input id="searchBtn" type=submit value="Найти" src="/images/searchIcon.png">
+                </form>
+
+                <div id="sideBar">
+                    <div id="sideBarHeader">
+                        <h1>Последние рецепты</h1>
+                    </div>
+                    <ul>
+                        <li><a href="#" title="Рецепт чего то там">Рецепт абдулахмаша</a></li>
+                        <li><a href="#" title="Собака">Вкусные печеные пальчики</a></li>
+                        <li><a href="#" title="по-корейски">Душевное варенье</a></li>
+                        <li><a href="#" title="Собака по-корейски">Необычные кухонные принадлежности</a></li>
+                        <li><a href="#" title="Сокорейски">Тут инфа разная классная. Заглядывайте сюда почаще! Спасибо!</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+        </div>
+
+        <div id="footer">
+
+            <div id="lowerLogo">
+                <img src="/images/logo2.png" width="150" height="150" alt="Блог" />
+            </div>
+
+            <div id="footerInner">
+                <div id="footerInfo">
+                    <p>Schnellchen (c)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

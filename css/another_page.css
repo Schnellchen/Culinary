@@ -1,0 +1,115 @@
+#colLeft {
+    display: inline-block;
+    vertical-align: top;
+    /* Выравнивает элемент по вертикали по самому высокому в строке */
+    width: 52.5rem;
+    min-height: 500px;
+    padding-bottom: 100px;
+    background: ;
+}
+
+#colRight {
+    display: inline-block;
+    position: relative;
+    width: 21rem;
+    margin-left: 1rem;
+}
+
+#search {
+    position: relative;
+    background: #ffa258;
+    height: 70px;
+}
+
+#searchInpt {
+    font-weight: 100;
+    font-size: 1rem;
+    color: #000;
+    height: 2rem;
+    width: 70%;
+    margin-top: 1.25rem;
+    margin-left: 0.625rem;
+    padding-left: 0.32rem;
+}
+
+#searchInpt:focus {
+    /* Убирает выделение при вводе текста в форму */
+    outline: none;
+}
+
+#searchBtn {
+    margin-top: 1.25rem;
+    background: #ffffff;
+    height: 2rem;
+    /* Для выравнивания поля и кнопки нужно добавить высоту */
+    width: 20%;
+    border: 0px solid #000000;
+    visibility: visible;
+    font-size: 1rem;
+    outline: none;
+    /* Убирает рамку на кнопке */
+}
+
+#searchBtn:hover {
+    background: #dddddd;
+    outline: none;
+    border: 1px solid #000000;
+    /* Убирает рамку при наведении */
+}
+
+#sideBar {
+    position: relative;
+    margin-top: 3.2rem;
+    /* Отступ от окна с поиска */
+    background: #fff7c2;
+    color: #000000;
+    border: 0px solid #000000;
+}
+
+#sideBarHeader {
+    height: 2.5rem;
+    background-color: #ffa258;
+    border-bottom: px solid #000000;
+
+}
+
+#sideBarHeader h1 {
+    padding-top: 0.625rem;
+    padding-left: 0.625rem;
+}
+
+#sideBar ul {
+    position: relative;
+    padding: 0;
+    /* Чтобы убрать поля вокруг списка */
+    list-style: none;
+    /*Запрет маркеров для тегов списков */
+}
+
+#sideBar ul li {
+    padding: 10px 0px 10px 10px;
+    border-bottom: 1px solid #000000;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+#sideBar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+#sideBar ul li a:hover {
+    color: #a02a63;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    #colLeft {
+        width: 100%;
+    }
+    #colRight {
+        display: none;
+    }
+
+}
