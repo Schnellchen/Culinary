@@ -1,0 +1,98 @@
+#loginBlock {
+    position: relative;
+    max-width: 100%;
+    width: 31.25rem;
+    height: 31.25rem;
+    background: #ffa258;
+    margin: auto;
+}
+
+#blockHeader {
+    background: brown;
+    width: 100%;
+    height: 7.5rem;
+}
+
+#loginForm {
+    width: 100%;
+    height: 76%;
+}
+
+#usernameInput {
+    display: block;
+    width: 70%;
+    position: relative;
+    margin: auto;
+    background: #eeeeee;
+    border: 0px solid #000000;
+    font-weight: 100;
+    font-size: 1.125rem;
+    padding: 0.5rem;
+    top: 20%;
+}
+
+#username:focus {
+    outline: none;
+}
+
+#passwordInput {
+    width: 70%;
+    display: block;
+    position: relative;
+    margin: auto;
+    background: #eeeeee;
+    font-weight: 100;
+    font-size: 1.125rem;
+    padding: 0.5rem;
+    top: 30%;
+}
+
+#password:focus {
+    outline: none;
+}
+
+#loginBtn:hover {
+    background: #dddddd;
+    outline: none;
+    /* Убирает рамку при наведении */
+}
+
+#loginBtn {
+    border: 0px solid black;
+    position: relative;
+    height: 2.5rem;
+    width: 9.375rem;
+    top: 45%;
+    margin: auto;
+    background: #a02a63;
+}
+
+#loginBtn a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 100;
+    font-size: 1.125rem;
+    padding-top: 0.6875rem;
+    padding-bottom: 0.6875rem;
+    color: #fff;
+}
+
+#btnForm:hover {
+    background: #fff7c2;
+    color: #000000;
+}
+
+#btnForm:hover > a {
+    background: #fff7c2;
+    color: #000000;
+}
+
+@media screen and (max-width: 1000px) {
+
+    html {
+        font-size: 32px;
+    }
+
+}
