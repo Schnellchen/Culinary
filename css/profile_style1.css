@@ -1,32 +1,29 @@
+@charset "UTF-8";
 * {
-    padding: 0;
-    margin: 0;
-}
+  padding: 0;
+  margin: 0; }
 
 body {
-    background: #fff7c2;
-}
+  background: #fff7c2; }
 
 #sas {
-    background: pink;
-}
+  background: pink; }
 
 div {
-    word-wrap: break-word;
-}
+  word-wrap: break-word; }
 
 #avatarImg {
-    display: block;
-    position: relative;
-    width: 200px;
-    height: 200px;
-    /* Радиус скругления */
-    border: 3px solid black;
-    /* Параметры рамки */
-    box-shadow: 0 0 7px #666;
-    /* Параметры тени */
-}
+  display: block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  /* ╨а╨░╨┤╨╕╤Г╤Б ╤Б╨║╤А╤Г╨│╨╗╨╡╨╜╨╕╤П */
+  border: 3px solid black;
+  /* ╨Я╨░╤А╨░╨╝╨╡╤В╤А╤Л ╤А╨░╨╝╨║╨╕ */
+  box-shadow: 0 0 7px #666;
+  /* ╨Я╨░╤А╨░╨╝╨╡╤В╤А╤Л ╤В╨╡╨╜╨╕ */ }
 
 .statItem {
-    background: white;
-}
+  background: white; }
+
+/*# sourceMappingURL=profile_style1.css.map */
