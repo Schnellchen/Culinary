@@ -6,8 +6,13 @@
 body {
   background: #fff7c2; }
 
-#sas {
-  background: pink; }
+.userInfo {
+  min-height: 250px;
+  background: pink;
+  border-bottom: 1px solid black; }
+
+.btn-warning {
+  background: #ffa258; }
 
 div {
   word-wrap: break-word; }
@@ -17,13 +22,19 @@ div {
   position: relative;
   width: 200px;
   height: 200px;
-  /* ╨а╨░╨┤╨╕╤Г╤Б ╤Б╨║╤А╤Г╨│╨╗╨╡╨╜╨╕╤П */
+  /* Радиус скругления */
   border: 3px solid black;
-  /* ╨Я╨░╤А╨░╨╝╨╡╤В╤А╤Л ╤А╨░╨╝╨║╨╕ */
+  /* Параметры рамки */
   box-shadow: 0 0 7px #666;
-  /* ╨Я╨░╤А╨░╨╝╨╡╤В╤А╤Л ╤В╨╡╨╜╨╕ */ }
+  /* Параметры тени */ }
 
 .statItem {
-  background: white; }
+  background: white;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 1px solid black; }
+  .statItem p {
+    margin: 0; }
 
 /*# sourceMappingURL=profile_style1.css.map */
