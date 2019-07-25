@@ -1,14 +1,9 @@
 @charset "UTF-8";
-* {
-  padding: 0;
-  margin: 0; }
-
 body {
   background: #fff7c2; }
 
 .userInfo {
   min-height: 250px;
-  background: pink;
   border-bottom: 1px solid black; }
 
 .btn-warning {
@@ -22,19 +17,30 @@ div {
   position: relative;
   width: 200px;
   height: 200px;
-  /* Радиус скругления */
+  /* ╨а╨░╨┤╨╕╤Г╤Б ╤Б╨║╤А╤Г╨│╨╗╨╡╨╜╨╕╤П */
   border: 3px solid black;
-  /* Параметры рамки */
+  /* ╨Я╨░╤А╨░╨╝╨╡╤В╤А╤Л ╤А╨░╨╝╨║╨╕ */
   box-shadow: 0 0 7px #666;
-  /* Параметры тени */ }
+  /* ╨Я╨░╤А╨░╨╝╨╡╤В╤А╤Л ╤В╨╡╨╜╨╕ */ }
 
 .statItem {
-  background: white;
   display: block;
   margin: 0;
-  padding: 0;
-  border: 1px solid black; }
+  padding: 0; }
   .statItem p {
     margin: 0; }
+
+.userBio {
+  padding-bottom: 20px; }
+
+.postImg {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  margin-top: 20px; }
+
+.userPost {
+  margin-top: 20px; }
 
 /*# sourceMappingURL=profile_style1.css.map */
