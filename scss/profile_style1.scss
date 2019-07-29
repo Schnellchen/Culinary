@@ -1,9 +1,46 @@
 $main-bg : #fff7c2;
 $orange : #ffa258;
+$violet: #a02a63;
 
 body {
     background: $main-bg;
 }
+
+.navbar {
+    background: $orange;
+    
+    ul {
+        
+        padding: 0.5rem 1rem;
+        
+        li:hover {
+            background: $main-bg;
+            
+            nav-link {
+                color: $violet;
+            }
+        }
+    }
+}
+
+.dropdown-menu {
+    background: $orange;
+    a {
+        color: $violet;
+    }
+    a:hover {
+        background: $main-bg;
+        color: $violet;
+    }
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(160,45,99, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: $violet;
+} 
 
 .userInfo {
     min-height: 250px;
@@ -33,11 +70,12 @@ div {
 
 .statItem {
     display: block;
-    margin: 0;
     padding: 0;
 
     p {
-        margin: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: 500;
         
     }
 }

@@ -2,6 +2,29 @@
 body {
   background: #fff7c2; }
 
+.navbar {
+  background: #ffa258; }
+  .navbar ul {
+    padding: 0.5rem 1rem; }
+    .navbar ul li:hover {
+      background: #fff7c2; }
+      .navbar ul li:hover nav-link {
+        color: #a02a63; }
+
+.dropdown-menu {
+  background: #ffa258; }
+  .dropdown-menu a {
+    color: #a02a63; }
+  .dropdown-menu a:hover {
+    background: #fff7c2;
+    color: #a02a63; }
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(160,45,99, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+
+.custom-toggler.navbar-toggler {
+  border-color: #a02a63; }
+
 .userInfo {
   min-height: 250px;
   border-bottom: 1px solid black; }
@@ -25,10 +48,11 @@ div {
 
 .statItem {
   display: block;
-  margin: 0;
   padding: 0; }
   .statItem p {
-    margin: 0; }
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500; }
 
 .userBio {
   padding-bottom: 20px; }
