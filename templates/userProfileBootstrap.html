@@ -5,32 +5,58 @@
     <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/profile_style1.css">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-right">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbar1">
-            <!-- Navbar content -->
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
         </div>
-    </nav>
-    <div class="container-fluid wrapper"></div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
     <div class="container content">
         <div class="row"></div>
-        <div class="col-md-8">
+        <div class="col-md-8 mt-5">
             <div class="row userInfo">
                 <div class="col-md-12">
                     <div class="row stats">
-                        <div class="col-md-3">
-                            <img id="avatarImg" class="img img-circle" src="/images/45476.jpg" alt="User avatar">
+                        <div class="col-md-4">
+                            <img id="avatarImg" class="rounded-circle" src="/images/45476.jpg" alt="User avatar">
                         </div>
                         <div class="col-lg-8 col-md-offset-1">
                             <div class="row userNickname">
@@ -41,16 +67,16 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-4 statItem">
-                                    <h4 class="text-center">1</h4>
-                                    <h4 class="text-center">подписчик</h4>
+                                    <p class="text-center">1</p>
+                                    <p class="text-center">подписчик</p>
                                 </div>
-                                <div class="col-xs-4 statItem">
-                                    <h4 class="text-center">1</h4>
-                                    <h4 class="text-center">подписчик</h4>
+                                                                <div class="col-xs-4 statItem">
+                                    <p class="text-center">1</p>
+                                    <p class="text-center">подписчик</p>
                                 </div>
-                                <div class="col-xs-4 statItem">
-                                    <h4 class="text-center">1</h4>
-                                    <h4 class="text-center">подписчик</h4>
+                                                                <div class="col-xs-4 statItem">
+                                    <p class="text-center">1</p>
+                                    <p class="text-center">подписчик</p>
                                 </div>
                             </div>
                             <div class="row userBio">
@@ -75,7 +101,7 @@
                 <div class="col-lg-4"><img class="img postImg" src="/images/45476.jpg" alt="Another dish"></div>
                 <div class="col-lg-4"><img class="img postImg" src="/images/45476.jpg" alt="Another dish"></div>
             </div>
-            <div class="row userPost">
+            <div class="row userPost mb-5">
                 <div class="col-lg-4"><img class="img mx-auto postImg" src="/images/45476.jpg" alt="Another dish"></div>
                 <div class="col-lg-4"><img class="img postImg" src="/images/45476.jpg" alt="Another dish"></div>
                 <div class="col-lg-4"><img class="img postImg" src="/images/45476.jpg" alt="Another dish"></div>
@@ -94,10 +120,6 @@
         </div>
     </footer>
     <!-- Footer -->
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 </body>
 
 </html>
