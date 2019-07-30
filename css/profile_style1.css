@@ -3,13 +3,12 @@ body {
   background: #fff7c2; }
 
 .navbar {
-  background: #ffa258; }
-  .navbar ul {
-    padding: 0.5rem 1rem; }
-    .navbar ul li:hover {
-      background: #fff7c2; }
-      .navbar ul li:hover nav-link {
-        color: #a02a63; }
+  background: #ffa258;
+  padding: 0rem 1rem; }
+  .navbar .navbar-nav .nav-item:hover {
+    background: #fff7c2; }
+  .navbar .navbar-nav .nav-link {
+    color: #a02a63; }
 
 .dropdown-menu {
   background: #ffa258; }

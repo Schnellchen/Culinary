@@ -6,20 +6,22 @@ body {
     background: $main-bg;
 }
 
+.navbar-collapse {
+    
+}
+
 .navbar {
     background: $orange;
-    
-    ul {
+    padding: 0rem 1rem;
+    .navbar-nav {
         
-        padding: 0.5rem 1rem;
         
-        li:hover {
+        .nav-item:hover {
             background: $main-bg;
-            
-            nav-link {
-                color: $violet;
-            }
         }
+        .nav-link {
+                color: $violet;
+            }     
     }
 }
 
