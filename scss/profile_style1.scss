@@ -6,8 +6,9 @@ body {
     background: $main-bg;
 }
 
-.navbar-collapse {
-    
+.nav-link {
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .navbar {
@@ -102,3 +103,14 @@ div {
 .page-footer {
     background: $orange;
 }
+
+.sideBar {
+}
+
+@media (min-width: 576px), (min-width: 768px) {
+    a {
+        text-align: center;
+    }
+}
+
+
