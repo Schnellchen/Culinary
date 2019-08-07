@@ -111,7 +111,9 @@ div {
     background: $orange;
 }
 
-.sideBar {}
+.lowerLogo {
+    float: right;
+}
 
 @media 
 (max-width: 768px) {
@@ -123,4 +125,8 @@ div {
         width: 350px;
         height: 350px;
     }
+    
+    .lowerLogo {
+    display: none;
+}
 }

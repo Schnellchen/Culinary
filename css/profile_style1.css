@@ -76,12 +76,18 @@ div {
 .page-footer {
   background: #ffa258; }
 
+.lowerLogo {
+  float: right; }
+
 @media (max-width: 768px) {
   .nav-link {
     text-align: center; }
 
   .postImg {
     width: 350px;
-    height: 350px; } }
+    height: 350px; }
+
+  .lowerLogo {
+    display: none; } }
 
 /*# sourceMappingURL=profile_style1.css.map */
