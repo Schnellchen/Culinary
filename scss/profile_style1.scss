@@ -52,6 +52,10 @@ body {
     border-color: $violet;
 }
 
+.content {
+    min-height: 1200px;
+}
+
 .userInfo {
     min-height: 250px;
     border-bottom: 1px solid black;
@@ -103,6 +107,10 @@ div {
     margin-top: 20px;
 }
 
+.noUserPost {
+    display: none;
+}
+
 .userPost {
     margin-top: 20px;
 }
@@ -115,8 +123,7 @@ div {
     float: right;
 }
 
-@media 
-(max-width: 768px) {
+@media (max-width: 768px) {
     .nav-link {
         text-align: center;
     }
@@ -125,8 +132,8 @@ div {
         width: 350px;
         height: 350px;
     }
-    
+
     .lowerLogo {
-    display: none;
-}
+        display: none;
+    }
 }
