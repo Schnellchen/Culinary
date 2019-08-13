@@ -49,11 +49,11 @@ div {
   position: relative;
   width: 200px;
   height: 200px;
-  /* ╨а╨░╨┤╨╕╤Г╤Б ╤Б╨║╤А╤Г╨│╨╗╨╡╨╜╨╕╤П */
+  /* Радиус скругления */
   border: 3px solid black;
-  /* ╨Я╨░╤А╨░╨╝╨╡╤В╤А╤Л ╤А╨░╨╝╨║╨╕ */
+  /* Параметры рамки */
   box-shadow: 0 0 7px #666;
-  /* ╨Я╨░╤А╨░╨╝╨╡╤В╤А╤Л ╤В╨╡╨╜╨╕ */ }
+  /* Параметры тени */ }
 
 .statItem {
   display: block;
@@ -80,6 +80,10 @@ div {
   margin-top: 20px;
   cursor: pointer; }
 
+.carousel-item-img {
+  height: 35rem;
+  margin: auto; }
+
 .noUserPost {
   display: none; }
 
@@ -93,6 +97,10 @@ div {
   float: right; }
 
 @media (max-width: 768px) {
+  .form-control {
+    width: 80%;
+    margin: auto; }
+
   .nav-link {
     text-align: center; }
 
@@ -101,6 +109,13 @@ div {
     height: 350px; }
 
   .lowerLogo {
-    display: none; } }
+    display: none; }
+
+  .fixed-top {
+    position: relative; }
+
+  .carousel-item-img {
+    height: 20rem;
+    margin: auto; } }
 
 /*# sourceMappingURL=profile_style.css.map */
