@@ -1,312 +1,106 @@
-#userInfoBlock {
-    position: relative;
-    height: 15.625rem;
-    /* background: #fff7c2; */
-    border-bottom: 1px solid black;
-    width: 100%;
-}
+@charset "UTF-8";
+body {
+  background: #fff7c2; }
 
-#avatarBlock {
-    float: left;
-    height: inherit;
-    width: 30%;
-}
+.navbar {
+  background: #ffa258;
+  padding: 0rem 1rem; }
+  .navbar .navbar-nav .nav-item:hover {
+    background: #fff7c2; }
+  .navbar .navbar-nav .nav-link {
+    color: #a02a63;
+    padding-top: 25px;
+    padding-bottom: 25px; }
+
+.dropdown-menu {
+  background: #ffa258;
+  padding: 0rem 0;
+  margin: 0rem 0 0; }
+  .dropdown-menu .dropdown-divider {
+    margin: 0; }
+  .dropdown-menu a {
+    color: #a02a63; }
+  .dropdown-menu a:hover {
+    background: #fff7c2;
+    color: #a02a63;
+    border-radius: 0.25rem; }
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(160,45,99, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+
+.custom-toggler.navbar-toggler {
+  border-color: #a02a63; }
+
+.content {
+  min-height: 1200px; }
+
+.userInfo {
+  min-height: 250px;
+  border-bottom: 1px solid black; }
+
+.btn-warning {
+  background: #ffa258; }
+
+div {
+  word-wrap: break-word; }
 
 #avatarImg {
-    display: block;
-    position: relative;
-    width: 200px;
-    height: 200px;
-    margin: auto;
-    border-radius: 100px;
-    /* Радиус скругления */
-    border: 3px solid black;
-    /* Параметры рамки */
-    box-shadow: 0 0 7px #666;
-    /* Параметры тени */
-}
+  display: block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  /* ╨а╨░╨┤╨╕╤Г╤Б ╤Б╨║╤А╤Г╨│╨╗╨╡╨╜╨╕╤П */
+  border: 3px solid black;
+  /* ╨Я╨░╤А╨░╨╝╨╡╤В╤А╤Л ╤А╨░╨╝╨║╨╕ */
+  box-shadow: 0 0 7px #666;
+  /* ╨Я╨░╤А╨░╨╝╨╡╤В╤А╤Л ╤В╨╡╨╜╨╕ */ }
 
-#infoBlock {
-    float: right;
-    height: inherit;
-    width: 70%;
-}
+.statItem {
+  display: block;
+  padding: 0;
+  cursor: pointer; }
+  .statItem p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500; }
 
-#userNicknameBlock {
-    height: 20%;
-    font-size: 2rem;
-    font-weight: 900;
-}
+.subsItemImg {
+  border-radius: 50px;
+  width: 50px;
+  height: 50px; }
 
-#userNickname {
-    float: left;
-    height: 100%;
-    width: 50%;
-}
-
-.subscriptionBtn {
-    position: relative;
-    float:right;
-    background: #369;
-    font-size: 1rem;
-    height: 100%;
-    border-radius: 8px; 
-}
-
-.subscriptionBtn span {
-    position: relative;
-    top: 1rem;
-    color: white;
-}
-
-.subscriptionBtn:hover {
-
-    background: #17a;
-
-}
-
-.subscriptionBtn {
-    
-}
-
-#userStats {
-    height: 20%;
-    font-weight: 900;
-}
-
-.statsItem {
-    display: inline-block;
-    width: 6rem;
-    height: 100%;
-    font-size: 1, 25rem;
-    margin-left: 3, 125rem;
-}
-
-.statName {
-    text-align: center;
-    height: 50%;
-}
-
-.statValue {
-    text-align: center;
-    height: 50%;
-
-}
-
-#userBio b {
-    font-size: 1, 25rem;
-}
-
-#userBio {
-    height: 50%;
-    margin-top: 1rem;
-    font-size: 1rem;
-}
-
-#userReceiptsBlock {
-    width: 52.5rem;
-    background: ;
-    padding-top: 50px;
-    padding-bottom: 100px;
-}
-
-#userReceipts {
-    min-height: 11.9rem;
-    width: 100%;
-    background: ;
-
-}
-
-#userReceipts tr {
-    background: ;
-}
-
-#userReceipts td {
-    background: ;
-    padding-bottom: 20px;
-}
-
-.userReceiptsItem {
-    background: ;
-    width: 11.9rem;
-    height: 11.9rem;
-    margin: auto;
-}
-
-.receiptsItemImg {
-    width: 100%;
-    height: 100%;
-}
-
-
-.modalbackground
-
-/* Затемненный фон */
-    {
-    margin: 0;
-    /* убираем отступы */
-    padding: 0;
-    /* убираем отступы */
-    position: fixed;
-    /* фиксируем положение */
-    top: 0;
-    /* растягиваем блок по всему экрану */
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.5);
-    /* background: rgba(0,0,0,0.5); полупрозрачный цвет фона */
-    z-index: 100;
-    /* выводим фон поверх всех слоев на странице браузера */
-    opacity: 0;
-    /* Делаем невидимым */
-    pointer-events: none;
-    /* элемент невидим для событий мыши */
-}
-
-/* Отображение модального окна. Псевдокласс target - целевой элемент вызывается через id по ссылке*/
-.modalbackground:target {
-    opacity: 1;
-    /* делаем окно видимым */
-    pointer-events: auto;
-    /* элемент видим для событий мыши */
-}
-
-/* Само диалоговое окно*/
-.modalwindow {
-    vertical-align: top;
-    position: relative;
-    width: 50%;
-    height: 70%;
-    margin: auto;
-    margin-top: 5%;
-}
-
-.userPostImg {
-    position: absolute;
-    width: 60%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: white;
-    border-right: 1px solid #EDEFF2;
-}
+.userBio {
+  padding-bottom: 20px; }
 
 .postImg {
-    width: 100%;
-    height: 100%;
-}
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  margin-top: 20px;
+  cursor: pointer; }
 
-.postDescription {
-    position: absolute;
-    width: 40%;
-    height: 100%;
-    background: ;
-    top: 0;
-    right: 0;
-    background: white;
-}
+.noUserPost {
+  display: none; }
 
-.shortInfo {
-    position: relative;
-    height: 10%;
-    border-bottom: 1px solid #EDEFF2;
-}
+.userPost {
+  margin-top: 20px; }
 
-.postName {
-    position: relative;
-    top: 1.5rem;
-    width: 80%;
-    height: 30%;
-    background: ;
-    vertical-align: middle;
-}
+.page-footer {
+  background: #ffa258; }
 
-.postName p{
-    text-decoration: underline;
-    font-weight: 900;
-    text-align: center;
-}
+.lowerLogo {
+  float: right; }
 
-.closeBtnBlock {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 20%;
-    background: ;
-}
+@media (max-width: 768px) {
+  .nav-link {
+    text-align: center; }
 
-.closeBtnBlock a {
-    background: ;
-    display: block;
-    position: relative;
-    width: 2rem;
-    height: 2rem;
-    top: 1rem;
-    margin: auto;
-    border-radius: 50px;
-}
+  .postImg {
+    width: 350px;
+    height: 350px; }
 
-.closeBtnBlock img{
-    widows: 100%;
-    height: 100%;
-}
+  .lowerLogo {
+    display: none; } }
 
-.descriptionBlock {
-    height: 90%;
-    background: ;
-}
-
-.description {
-    position: relative;
-    width: 90%;
-    margin: auto;
-    background: white;
-    height: 90%;
-    border: 1px solid #EDEFF2;
-    top: 5%;
-}
-
-@media screen and (max-width: 1000px) {
-    #userInfoBlock {
-        width: 100%;
-    }
-
-    #userReceiptsBlock {
-        width: 100%;
-    }
-
-    #userReceipts td {
-        padding-bottom: 0px;
-    }
-
-    .userReceiptsItem {
-        background: ;
-        width: 95%;
-        height: 10rem;
-    }
-
-    .receiptsItemImg {
-        width: 100%;
-        height: 95%;
-    }
-    
-    .modalwindow {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    margin-top: 0%;    
-    }
-    
-    .postImg {
-    width: 100%;
-    height: 50%;
-    margin-top: 50%;
-    }
-    
-    .closeBtnBlock a {
-        width: 2rem;
-        height: 2rem;
-    }
-}
+/*# sourceMappingURL=profile_style.css.map */
