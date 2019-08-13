@@ -2,653 +2,399 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Добро пожаловать!</title>
-    <!--<link rel="stylesheet" href="/Culinary/css/base_style.css" />
-    <link rel="stylesheet" href="/Culinary/css/home_style.css" />-->
+    <title>Профиль</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
     <style type="text/css">
-     /* Для того, чтобы блок рос по содержимому, необходимо убрать ему высоту */
+    body {
+  background: #fff7c2; }
 
-* {
-    /* Пока хз что это, но оно позволяет шапке лежать ровно */
-    margin: 0;
-    padding: 0;
-}
+.navbar {
+  background: #ffa258;
+  padding: 0rem 1rem; }
+  .navbar .navbar-nav .nav-item:hover {
+    background: #fff7c2; }
+  .navbar .navbar-nav .nav-link {
+    color: #a02a63;
+    padding-top: 25px;
+    padding-bottom: 25px; }
 
-html {
-    min-height: 100%;
-    width: 100%;
-    font-size: 16px;
-}
-
-nav,
-footer,
-header,
-section {
-    display: block;
-    /* Элементы показываются как блочные сверху-вниз */
-}
-
-h1,
-h2,
-p,
-ul li,
-a {
-    word-wrap: break-word;
-    /* Перенос длинных слов */
-    font-family: Georgia, "Times New Roman", serif;
-}
-
-body {
-    /* Общий стиль для тега body */
-    width: 100%;
-    min-height: 100%;
-    color: #333;
-    /* Элементы показываются как блочные сверху-вниз */
+.dropdown-menu {
+  background: #ffa258;
+  padding: 0rem 0;
+  margin: 0rem 0 0; }
+  .dropdown-menu .dropdown-divider {
+    margin: 0; }
+  .dropdown-menu a {
+    color: #a02a63; }
+  .dropdown-menu a:hover {
     background: #fff7c2;
-    Цвет фона */ font-family: "Times New Roman", serif;
-    /*станавливает семейство шрифта, которое будет использоваться для оформления текста содержимого */
-}
-
-#wrapper {
-    position: relative;
-    min-height: 100%;
-    width: 100%;
-    margin: auto;
-    border: 0px solid black;
-}
-
-#header {
-    position: absolute;
-    /* Абсолюнтое позиционирование задает место от краев браузера(Родитель - тег body)*/
-    background: #ffa258;
-    width: 100%;
-    height: 4rem;
-    z-index: 100;
-    left: 0;
-    top: 0;
-}
-
-#headerInner {
-    position: relative;
-    width: 1200px;
-    max-width: 100%;
-    height: 100%;
-    margin: auto;
-}
-
-#logo {
-    width: 150px;
-    height: 50px;
-    position: absolute;
-    border: 0px solid #000;
-    top: 10%;
-    /* При позиции Absolute элемент позиционируется от элемента с позицией relative */
-}
-
-#logo img {
-    width: 100%;
-    height: 100%;
-}
-
-#topMenu {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-#topMenu ul {
-    margin-left: 150px;
-    padding: 0;
-    /* Чтобы убрать поля вокруг списка */
-    list-style: none;
-    /*Запрет маркеров для тегов списков */
-}
-
-#topMenu ul li {
-    float: left;
-    width: 7rem;
-    height: 100%;
-}
-
-#topMenu ul li a {
-    display: block;
-    text-align: center;
-    /* Применяется только для блочных элементов. Выравнивание по горизонтали */
     color: #a02a63;
-    text-decoration: none;
-    padding-top: 1.5rem;
-    width: 100%;
-    padding-bottom: 1.4rem;
-}
-
-#topMenu ul li:hover {
-    background-color: #fff7c2;
-}
-
-#content {
-    position: relative;
-    width: 1200px;
-    max-width: 100%;
-    min-height: 100%;
-    margin: auto;
-    /* Одинаковые отступы слева и справа */
-    padding-top: 5rem;
-    border: 0px solid #000;
-    padding-bottom: 5rem;
-}
-
-#footer {
-    position: absolute;
-    background: #ffa258;
-    width: 100%;
-    height: 3rem;
-    bottom: 0;
-}
-
-#lowerLogo {
-    position: absolute;
-    right: 0;
-    bottom: 3rem;
-    width: 150px;
-}
-
-#footerInner {
-    position: relative;
-    width: 1200px;
-    max-width: 100%;
-    height: 100%;
-    margin: auto;
-}
-
-#footerInfo {
-    position: relative;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 50%;
-}
-
-@media screen and (max-width: 1000px) {
-
-    html {
-        font-size: 32px;
-    }
-
-    #logo {
-        display: none
-    }
-
-    #topMenu ul {
-        margin-left: 0;
-    }
-
-    #topMenu ul li {
-        width: 25%;
-    }
-
-}
-
-
-       #colLeft {
-    position: relative;
-    border: 0px solid #000;
-    width: auto;
-    min-height: 500px;
-    padding-bottom: 100px;
-    /*background: blue;
-    */
-}
-
-#homePreview {
-    position: relative;
-    min-height: 100%;
-    width: 1200px;
-    max-width: 100%;
-}
-
-.boxHeader {
-    position: relative;
-    width: 1200px;
-    max-width: 100%;
-    text-align: center;
-}
-
-.boxHeader h2 {
-    /* Шрифты в порядке предпочтения, на случай, если указаного шрифта не будет */
-    line-height: 1.5;
-    /* Межстрочный интервал */
-    color: #a02a63;
-}
-
-#collage {
-    margin-top: 6rem;
-    position: relative;
-    max-width: 100%;
-    width: 1200px;
-    min-height: 500px;
-    padding-bottom: 3rem;
-    background: 0;
-}
-
-#collage img {
-    position: absolute;
-    width: 33%;
-    max-width: 400px;
-    box-shadow: 2px 2px 30px;
-    -webkit-transition: box-shadow 0.5s, -webkit-transform 0.5s ease-in-out;
-    /* Плавное возвращение */
-}
-
-/* nth-child в своем цикле считает все элементы, находящиеся на одном уровне вложенности относительно родительского элемента. */
-
-#collage img:nth-child(1) {
-    /* 1 потомок img в pictureBox */
-    z-index: 2;
-    top: 15%;
-    left: 29%;
-    -webkit-transform: rotate(5deg)
-}
-
-#collage img:nth-child(2) {
-    z-index: 1;
-    left: 60%;
-    -webkit-transform: rotate(-18deg)
-}
-
-#collage img:nth-child(3) {
-    z-index: 2;
-    left: 65%;
-    top: 25%;
-    -webkit-transform: rotate(-8deg)
-}
-
-#collage img:nth-child(4) {
-    z-index: 1;
-    left: 3%;
-    top: 45%;
-    -webkit-transform: rotate(-30deg);
-}
-
-#collage img:nth-child(5) {
-    z-index: 2;
-    left: 60%;
-    top: 50%;
-    -webkit-transform: rotate(15deg);
-}
-
-#collage img:nth-child(6) {
-    z-index: 2;
-    left: 2%;
-    top: 0%;
-    -webkit-transform: rotate(-4deg);
-}
-
-#collage img:nth-child(7) {
-    z-index: 2;
-    left: 30%;
-    top: 60%;
-    -webkit-transform: rotate(4deg);
-}
-
-#collage img:hover {
-    /* Плавное возвращение при наведении */
-    -webkit-transition: box-shadow 0.5s, -webkit-transform 0.5s ease-in-out;
-    -webkit-transform: rotate(0);
-    -webkit-transform: scale(1.5, 1.5);
-    z-index: 50;
-    box-shadow: 10px 15px 30px;
-    /* Тени, смещение по X и Y, степень размытия,цвет */
-}
-
-#previewFeed {
-    position: relative;
-    width: 100%;
-    min-height: 100%;
-    margin-top: 10%;
-    /* Считается от ширины блока у которого не задана высота? */
-}
-
-.previewBox {
-    position: relative;
-    width: 100%;
-    height: 600px;
-    /* Фиксированная высота тк потомки вырваны из потока */
-    background: #fff7b9;
-    background: 0;
-}
-
-.pictureBox {
-    width: 50%;
-    overflow: hidden;
-    vertical-align: top;
-    background: 0;
-}
-
-.pictureBox img {
-    width: 100%;
-    border-radius: 10%;
-}
-
-.wordBox {
-    width: 45%;
-    vertical-align: top;
-    background: 0;
-}
-
-.wordBox img {
-    width: 100%;
-    pointer-events: none;
-    /* Предотвращает события мыши и щелчки по элементу(для запрета перетаскивания) */
-}
-
-.previewBox:nth-child(odd) .wordBox {
-    float: right;
-}
-
-.previewBox:nth-child(odd) .pictureBox {
-    float: left;
-}
-
-.previewBox:nth-child(even) .pictureBox {
-    float: right;
-}
-
-.previewBox:nth-child(even) .wordBox {
-    float: left;
-}
-
-#authBlock {
-    position: relative;
-    width: 100%;
-    height: 1000px;
-    background: 0;
-}
-
-#leftSide {
-    position: relative;
-    width: 50%;
-    top: 25%;
-    /* Вычисляется по верхней границе. Высота 50% => чтобы сдвинуть на половину нужно 25%*/
-}
-
-#regOffer {
-    position: relative;
-    width: 90%;
-    height: 100px;
-    border-radius: 75px;
-    top: 40%;
-    margin: auto;
-}
-
-#rightSide {
-    position: relative;
-    width: 50%;
-    left: 50%;
-}
-
-#rightList {
-    list-style-position: inside;
-    /* Маркеры внутри блока*/
-}
-
-#rightList li {
-    padding-top: 7%;
-    padding-bottom: 7%;
-    font-size: 1.6rem;
-}
-
-#botSide {
-    position: relative;
-    width: 100%;
-}
-
-#botText {
-    position: relative;
-    text-align: center;
-    padding-top: 10%;
-    padding-bottom: 10%;
-}
-
-#botText p {
-    font-size: 40pt;
-}
-
-#logOffer {
-    position: relative;
-    width: 60%;
-    border-radius: 75px;
-    margin: auto;
-}
-
-.authBtn {
-    position: relative;
-    display: block;
-    font-size: 25pt;
-    width: 100%;
-    padding-top: 5%;
-    /* Зависит от ширины */
-    padding-bottom: 4%;
-    border-radius: inherit;
-    text-decoration: none;
-    color: white;
-    background: #00CC00;
-    text-align: center;
-}
-
-
-@media screen and (max-width: 1000px) {
-
-     #collage img {
-        position: absolute;
-        width: 33.3%;
-        box-shadow: none;
-        -webkit-transition: none;
-    }
-
-    #collage img:hover {
-        /* Плавное возвращение при наведении */
-        -webkit-transition: none;
-        -webkit-transform: none;
-        -webkit-transform: none;
-        z-index: 1;
-        box-shadow: none;
-        /* Тени, смещение по X и Y, степень размытия,цвет */
-    }
-
-    /* nth-child в своем цикле считает все элементы, находящиеся на одном уровне вложенности относительно родительского элемента. */
-
-    #collage img:nth-child(1) {
-        /* 1 потомок img в pictureBox */
-        z-index: 1;
-        top: 0;
-        left: 0;
-        -webkit-transform: none;
-
-    }
-
-    #collage img:nth-child(2) {
-        z-index: 1;
-        top: 0;
-        left: 33.3%;
-        -webkit-transform: none;
-    }
-
-    #collage img:nth-child(3) {
-        z-index: 1;
-        left: 66.6%;
-        top: 0;
-        -webkit-transform: none;
-    }
-
-    #collage img:nth-child(4) {
-        z-index: 1;
-        top: 70%;
-        left: 0;
-        -webkit-transform: none;
-    }
-
-    #collage img:nth-child(5) {
-        z-index: 3;
-        top: 35%;
-        left: 33.3%;
-        -webkit-transform: none;
-    }
-
-    #collage img:nth-child(6) {
-        z-index: 3;
-        top: 70%;
-        left: 66.6%;
-        -webkit-transform: none;
-    }
-
-    #collage img:nth-child(7) {
-        z-index: 3;
-        top: 70%;
-        left: 33.3%;
-        -webkit-transform: none;
-    }
-
-    .previewBox {
-        height: 1700px;
-    }
-
-    .pictureBox {
-        width: 100%;
-    }
-
-    .pictureBox img {
-        width: 100%;
-        border-radius: 10%;
-    }
-
-    .wordBox {
-        width: 100%;
-    }
-
-    .wordBox img {
-        width: 100%;
-        pointer-events: none;
-        /* Предотвращает события мыши и щелчки по элементу(для запрета перетаскивания) */
-    }
-
-    .previewBox:nth-child .pictureBox,
-    .wordBox {
-        float: none;
-    }
-
-    #rightList li {
-        padding-top: 7%;
-        padding-bottom: 7%;
-        font-size: 1rem;
-    }
-
-
-
-}
-
+    border-radius: 0.25rem; }
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(160,45,99, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+
+.custom-toggler.navbar-toggler {
+  border-color: #a02a63; }
+
+.content {
+  min-height: 1200px; }
+
+.userInfo {
+  min-height: 250px;
+  border-bottom: 1px solid black; }
+
+.btn-warning {
+  background: #ffa258; }
+
+div {
+  word-wrap: break-word; }
+
+#avatarImg {
+  display: block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  /* ╨а╨░╨┤╨╕╤Г╤Б ╤Б╨║╤А╤Г╨│╨╗╨╡╨╜╨╕╤П */
+  border: 3px solid black;
+  /* ╨Я╨░╤А╨░╨╝╨╡╤В╤А╤Л ╤А╨░╨╝╨║╨╕ */
+  box-shadow: 0 0 7px #666;
+  /* ╨Я╨░╤А╨░╨╝╨╡╤В╤А╤Л ╤В╨╡╨╜╨╕ */ }
+
+.statItem {
+  display: block;
+  padding: 0;
+  cursor: pointer; }
+  .statItem p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500; }
+
+.subsItemImg {
+  border-radius: 50px;
+  width: 50px;
+  height: 50px; }
+
+.userBio {
+  padding-bottom: 20px; }
+
+.postImg {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  margin-top: 20px;
+  cursor: pointer; }
+
+.noUserPost {
+  display: none; }
+
+.userPost {
+  margin-top: 20px; }
+
+.page-footer {
+  background: #ffa258; }
+
+.lowerLogo {
+  float: right; }
+
+@media (max-width: 768px) {
+  .nav-link {
+    text-align: center; }
+
+  .postImg {
+    width: 350px;
+    height: 350px; }
+
+  .lowerLogo {
+    display: none; } }
 
     </style>
-
 </head>
 
+
 <body>
-    <div id="wrapper">
-        <header id="header">
-            <div id="headerInner">
-                <nav id="topMenu">
-                    <div id="logo">
-                        <img alt="Culinary logo" src="/Culinary/images/logo.png" alt="Блог" />
+    <nav class="navbar navbar-expand-md fixed-top">
+        <a class="navbar-brand" href="#"><img src="/images/logo.png" width="150" height="50" alt="Culinary" /></a>
+
+        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Домашняя</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Меню</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Обсуждения</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Мой профиль
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Настройки</a>
+                        <a class="dropdown-item" href="#">Редактировать</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Выход</a>
                     </div>
-                    <!-- nav задает навигацию по сайту-->
-                    <ul>
-                        <li><a href="home.html">Главная</a></li> <!-- Ссылка по имени домашней страницы -->
-                        <li><a href="#">Меню</a></li>
-                        <li><a href="#">Разделы</a></li>
-                        <li><a href="#">Обсуждения</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <div id="content">
-            <!--{% block content %}-->
-            <div id="homePreview">
-                <div class=boxHeader>
-                    <h2>Всегда хотели стать шеф-поваром? Или же просто хотите удивить родных и близких изысканными блюдами?</h2>
-                </div>
-                <div id="collage">
-                    <img alt="Dish image" src="/Culinary/images/dish1.jpg" />
-                    <img alt="Dish image" src="/Culinary/images/dish2.jpg" />
-                    <img alt="Dish image" src="/Culinary/images/dish3.jpg" />
-                    <img alt="Dish image" src="/Culinary/images/dish4.jpg" />
-                    <img alt="Dish image" src="/Culinary/images/dish5.jpg" />
-                    <img alt="Dish image" src="/Culinary/images/dish6.jpg" />
-                    <img alt="Dish image" src="/Culinary/images/dish7.jpg" />
-                </div>
-                <div id='previewFeed'>
-                    <div class="previewBox">
-                        <div class="pictureBox">
-                            <img alt="Картинка с поваром" src="/Culinary/images/cook1.jpg" />
-                        </div>
-                        <div class="wordBox">
-                            <img alt="Картинка с мудростью" src="/Culinary/images/note42.png" />
-                        </div>
-                    </div>
-                    <div class="previewBox">
-                        <div class="wordBox">
-                            <img alt="Картинка с мудростью" src="/Culinary/images/note62.png" />
-                        </div>
-                        <div class="pictureBox">
-                            <img alt="Картинка с поваром" src="/Culinary/images/cook2.jpg" />
-                        </div>
-                    </div>
-                    <div class="previewBox">
-                        <div class="pictureBox">
-                            <img alt="Картинка с поваром" src="/Culinary/images/cook3.jpg" />
-                        </div>
-                        <div class="wordBox">
-                            <img alt="Картинка с мудростью" src="/Culinary/images/note72.png" />
-                        </div>
-                    </div>
-                </div>
-                <div id="authBlock">
-                    <div id="leftSide">
-                        <div id="regOffer">
-                            <a class="authBtn" href="#">Зарегистрироваться</a>
-                        </div>
-                    </div>
-                    <div id="rightSide">
-                        <ul id="rightList">
-                            <li>Возможность следить за любимыми кулинарами</li>
-                            <li>Возможность создавать собственные рецепты</li>
-                            <li>Возможность участвовать в обсуждениях</li>
-                            <li>Вообще это круто. Регистрируйся, вот.</li>
-                        </ul>
-                    </div>
-                    <div id="botSide">
-                        <div id="botText">
-                            <p>Уже есть профиль?</p>
-                        </div>
-                        <div id="logOffer">
-                            <a class="authBtn" href="#">Войти</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--{% endblock %}-->
+                </li>
+            </ul>
+            <form class="form-inline mr-auto">
+                <input class="form-control" type="text" placeholder="Поиск..." aria-label="Search">
+                <button class="btn btn-primary btn-rounded btn-sm my-0 ml-sm-2" type="submit">Найти!</button>
+            </form>
         </div>
-        <div id="footer">
-            <div id="lowerLogo">
-                <img alt="Lower logo" src="/Culinary/images/logo2.png" width="150" height="150" alt="Блог" />
+    </nav>
+    <div class="container content mt-5">
+        <div class="row">
+            <div class="col-md-8 mt-5">
+                <div class="row userInfo">
+                    <div class="col-md-12">
+                        <div class="row stats">
+                            <div class="col-md-4">
+                                <img id="avatarImg" class="rounded-circle" src="/images/45476.jpg" alt="User avatar">
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="row userNickname">
+                                    <div class="col-md-7">
+                                        <h3 class="text-center">Schnellchen</h3>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="container">
+                                            <button type="button" class="btn btn-warning">Подписаться</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3 mb-3 mx-auto">
+                                    <div class="col-xs-3 offset-md-1 mx-auto statItem">
+                                        <a data-toggle="modal" data-target="#stat-item">
+                                        <p class="text-center">3</p>
+                                        <p class="text-center">Подписчиков</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-3 offset-md-1 mx-auto statItem">
+                                        <p class="text-center">10</p>
+                                        <p class="text-center">Подписок</p>
+                                    </div>
+                                    <div class="col-xs-3 offset-md-1 mx-auto statItem">
+                                        <p class="text-center">9</p>
+                                        <p class="text-center">Рецептов</p>
+                                    </div>
+
+                                </div>
+                                <div class="row userBio">
+                                    <div class="col-md-12">
+                                        <h4>О себе:</h4>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <p>Я делаю страничку не руками, а руками и палками, как будто курю через палочки чтобы руки не воняли. Этими палочками является бустрап. Вроде и классная вещь, позволяет делать адаптивные версии, но в то же время очень странная штуковина и у меня не всегда получается </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row noUserPost">
+                    <div class="col-lg-5 mx-auto mt-5">
+                        <h1 class="text-center">Пока нет публикаций</h1>
+                    </div>
+                </div>
+                <div class="row userPost">
+                    <div class="col-lg-4"><a data-toggle="modal" data-target="#userPost"><img class="img mx-auto postImg" src="/images/dish3.jpg" alt="Another dish"></a></div>
+                    <div class="col-lg-4"><img class="img postImg" src="/images/dish2.jpg" alt="Another dish"></div>
+                    <div class="col-lg-4"><img class="img postImg" src="/images/dish1.jpg" alt="Another dish"></div>
+                </div>
+                <div class="row userPost">
+                    <div class="col-lg-4"><img class="img mx-auto postImg" src="/images/dish2.jpg" alt="Another dish"></div>
+                    <div class="col-lg-4"><img class="img postImg" src="/images/dish4.jpg" alt="Another dish"></div>
+                    <div class="col-lg-4"><img class="img postImg" src="/images/dish6.jpg" alt="Another dish"></div>
+                </div>
+                <div class="row userPost mb-5">
+                    <div class="col-lg-4"><img class="img mx-auto postImg" src="/images/dish7.jpg" alt="Another dish"></div>
+                    <div class="col-lg-4"><img class="img postImg" src="/images/dish5.jpg" alt="Another dish"></div>
+                    <div class="col-lg-4"><img class="img postImg" src="/images/dish4.jpg" alt="Another dish"></div>
+                </div>
             </div>
-            <div id="footerInner">
-                <a href="#">Наверх</a>
-                <div id="footerInfo">
-                    <p>Schnellchen (c)</p>
+            <div class="col-md-4 mt-5 mb-5 sideBar">
+                <ul class="list-group">
+                    <h2>Последние новости</h2>
+                    <li class="list-group-item"><a href="#" title="ШОК!">Рецепт абдулахмаша</a></li>
+                    <li class="list-group-item"><a href="#" title="Собака">Вкусные печеные пальчики</a></li>
+                    <li class="list-group-item"><a href="#" title="по-корейски">Душевное варенье</a></li>
+                    <li class="list-group-item"><a href="#" title="Собака по-корейски">Необычные кухонные принадлежности</a></li>
+                    <li class="list-group-item"><a href="#" title="Сокорейски">Тут инфа разная классная. Заглядывайте сюда почаще! Спасибо!</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div id="userPost" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="gridModalLabel">Абдулахмаш</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+
+
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row modal-text">
+                                <p>Берем пучок укропа, затем кошачий хвостик. Двадцать пять картошек, семнадцать Лешек, ведро воды и соль туды, охапку дров и Абдулахмаш готов!</p>
+                            </div>
+
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img style="max-width:900px; max-height:600px" class="d-block img-fluid" src=/images/2641888.jpg alt="Первый слайд">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img style="max-width:900px; max-height:600px" class="d-block img-fluid" src="/images/d3FSBXgUers.jpg" alt="Второй слайд">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img style="max-width:900px; max-height:600px" class="d-block img-fluid" src="/images/IMG_1071.jpg" alt="Третий слайд">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div id="stat-item" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xs" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="gridModalLabel">Подпищеки</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid subs">
+                            <a href="#">
+                            <div class="row mt-2 subsItem">
+                            <div class="col-2">
+                                <img class="subsItemImg" src="/images/cook3.jpg" >
+                                </div>
+                                <div class="col-4 text-center">
+                                    <p>Kali Yuga</p>
+                                </div>
+                            </div>
+                            </a>
+                            <a href="#">
+                            <div class="row mt-2 subsItem">
+                            <div class="col-2">
+                                <img class="subsItemImg" src="/images/cook3.jpg" >
+                                </div>
+                                <div class="col-4 text-center">
+                                    <p>Kali Yuga</p>
+                                </div>
+                            </div>
+                            </a>
+                            <a href="#">
+                            <div class="row mt-2 subsItem">
+                            <div class="col-2">
+                                <img class="subsItemImg" src="/images/cook3.jpg" >
+                                </div>
+                                <div class="col-4 text-center">
+                                    <p>Kali Yuga</p>
+                                </div>
+                            </div>
+                            </a>
+                            <a href="#">
+                            <div class="row mt-2 subsItem">
+                            <div class="col-2">
+                                <img class="subsItemImg" src="/images/cook3.jpg" >
+                                </div>
+                                <div class="col-4 text-center">
+                                    <p>Kali Yuga</p>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small">
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-3">
+
+                    <!-- Links -->
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Ссылки</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">Very-cola.ru</a>
+                        </li>
+                        <li>
+                            <a href="#!">Shrek-cola.com</a>
+                        </li>
+                        <li>
+                            <a href="#!">Bigboobsbigopportunities.rom</a>
+                        </li>
+                        <li>
+                            <a href="#!">Why-why-where-is-wi-fi.boka.biz</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-md-9"><img class="lowerLogo" src="/images/logo2.png" width="200" height="200" alt="Logo"></div>
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 Schnellchen:
+            <a href="https://mdbootstrap.com/education/bootstrap/"> Culinary.su</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
 </body>
 
 </html>
