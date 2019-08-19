@@ -1,39 +1,4 @@
 @charset "UTF-8";
-body {
-  background: #fff7c2; }
-
-.navbar {
-  background: #ffa258;
-  padding: 0rem 1rem; }
-  .navbar .navbar-nav .nav-item:hover {
-    background: #fff7c2; }
-  .navbar .navbar-nav .nav-link {
-    color: #a02a63;
-    padding-top: 25px;
-    padding-bottom: 25px; }
-
-.dropdown-menu {
-  background: #ffa258;
-  padding: 0rem 0;
-  margin: 0rem 0 0; }
-  .dropdown-menu .dropdown-divider {
-    margin: 0; }
-  .dropdown-menu a {
-    color: #a02a63; }
-  .dropdown-menu a:hover {
-    background: #fff7c2;
-    color: #a02a63;
-    border-radius: 0.25rem; }
-
-.custom-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(160,45,99, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
-
-.custom-toggler.navbar-toggler {
-  border-color: #a02a63; }
-
-.content {
-  min-height: 1200px; }
-
 .userInfo {
   min-height: 250px;
   border-bottom: 1px solid black; }
@@ -49,11 +14,11 @@ div {
   position: relative;
   width: 200px;
   height: 200px;
-  /* Радиус скругления */
+  /* ╨а╨░╨┤╨╕╤Г╤Б ╤Б╨║╤А╤Г╨│╨╗╨╡╨╜╨╕╤П */
   border: 3px solid black;
-  /* Параметры рамки */
+  /* ╨Я╨░╤А╨░╨╝╨╡╤В╤А╤Л ╤А╨░╨╝╨║╨╕ */
   box-shadow: 0 0 7px #666;
-  /* Параметры тени */ }
+  /* ╨Я╨░╤А╨░╨╝╨╡╤В╤А╤Л ╤В╨╡╨╜╨╕ */ }
 
 .statItem {
   display: block;
@@ -90,12 +55,6 @@ div {
 .userPost {
   margin-top: 20px; }
 
-.page-footer {
-  background: #ffa258; }
-
-.lowerLogo {
-  float: right; }
-
 @media (max-width: 768px) {
   .form-control {
     width: 80%;
@@ -107,12 +66,6 @@ div {
   .postImg {
     width: 350px;
     height: 350px; }
-
-  .lowerLogo {
-    display: none; }
-
-  .fixed-top {
-    position: relative; }
 
   .carousel-item-img {
     height: 18rem;

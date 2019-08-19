@@ -2,60 +2,6 @@ $main-bg : #fff7c2;
 $orange : #ffa258;
 $violet: #a02a63;
 
-body {
-    background: $main-bg;
-}
-
-.navbar {
-    background: $orange;
-    padding: 0rem 1rem;
-
-    .navbar-nav {
-
-        .nav-item:hover {
-            background: $main-bg;
-        }
-
-        .nav-link {
-            color: $violet;
-            padding-top: 25px;
-            padding-bottom: 25px;
-        }
-    }
-}
-
-.dropdown-menu {
-    background: $orange;
-    padding: 0rem 0;
-    margin: 0rem 0 0;
-
-    .dropdown-divider {
-        margin: 0;
-    }
-
-    a {
-        color: $violet;
-    }
-
-    a:hover {
-        background: $main-bg;
-        color: $violet;
-        border-radius: 0.25rem;
-    }
-}
-
-.custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(160,45,99, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-.custom-toggler.navbar-toggler {
-    border-color: $violet;
-}
-
-.content {
-    min-height: 1200px;
-}
-
 .userInfo {
     min-height: 250px;
     border-bottom: 1px solid black;
@@ -128,13 +74,6 @@ div {
     margin-top: 20px;
 }
 
-.page-footer {
-    background: $orange;
-}
-
-.lowerLogo {
-    float: right;
-}
 @media (max-width: 768px) {
     
     .form-control {
@@ -151,14 +90,6 @@ div {
         height: 350px;
     }
 
-    .lowerLogo {
-        display: none;
-    }
-
-    .fixed-top {
-        position: relative;
-    }
-    
     .carousel-item-img {
     height: 18rem;
     margin: auto;
