@@ -53,7 +53,9 @@ body {
 }
 
 .content {
+    display: flex;
     min-height: 1200px;
+    justify-content: center;
 }
 
 .page-footer {

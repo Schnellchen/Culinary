@@ -1,0 +1,66 @@
+.collage {
+    display: flex;
+    margin-top: 12rem;
+    min-height: 400px;
+    min-width: 50%;
+    justify-content: space-around;
+}
+
+.collage__img {
+    position: absolute;
+    width: 33%;
+    max-width: 400px;
+    box-shadow: 2px 2px 30px;
+    -webkit-transition: box-shadow 0.5s, -webkit-transform 0.5s ease-in-out;
+    /* Плавное возвращение */
+
+    &:nth-child(1) {
+        z-index: 2;
+        -webkit-transform: rotate(5deg)
+    }
+
+    &:nth-child(2) {
+        z-index: 1;
+        -webkit-transform: rotate(-18deg)
+    }
+
+    &:nth-child(3) {
+        -webkit-transform: rotate(-8deg)
+    }
+
+    &:nth-child(4) {
+        z-index: 1;
+        -webkit-transform: rotate(-30deg);
+    }
+
+    &:nth-child(5) {
+        z-index: 2;
+        -webkit-transform: rotate(15deg);
+    }
+
+    &:nth-child(6) {
+        z-index: 2;
+        -webkit-transform: rotate(-4deg);
+    }
+
+    &:nth-child(7) {
+        z-index: 2;
+        -webkit-transform: rotate(4deg);
+    }
+
+    &:hover {
+        /* Плавное возвращение при наведении */
+        -webkit-transition: box-shadow 0.5s, -webkit-transform 0.5s ease-in-out;
+        -webkit-transform: rotate(0);
+        -webkit-transform: scale(1.5, 1.5);
+        z-index: 50;
+        box-shadow: 10px 15px 30px;
+        /* Тени, смещение по X и Y, степень размытия,цвет */
+    }
+}
+
+@media (max-width: 768px) {
+    .collage {
+    margin-top: 5rem;
+}
+}
