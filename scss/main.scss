@@ -1,49 +1,59 @@
 .collage {
     display: flex;
-    margin-top: 12rem;
-    min-height: 400px;
-    min-width: 50%;
-    justify-content: space-around;
+    width: 100%;
+    justify-content: center;
+    height:50rem;
+    background: black;
 }
 
 .collage__img {
+    width: 25%;
     position: absolute;
-    width: 33%;
-    max-width: 400px;
     box-shadow: 2px 2px 30px;
     -webkit-transition: box-shadow 0.5s, -webkit-transform 0.5s ease-in-out;
     /* Плавное возвращение */
 
     &:nth-child(1) {
+        left: 10%;
+        top: 40%;
         z-index: 2;
         -webkit-transform: rotate(5deg)
     }
 
     &:nth-child(2) {
+        top: 30%;
+        left: 12%;
         z-index: 1;
-        -webkit-transform: rotate(-18deg)
+        -webkit-transform: rotate(-18deg);
     }
 
     &:nth-child(3) {
-        -webkit-transform: rotate(-8deg)
+        -webkit-transform: rotate(-8deg);
+        top: 28%;
     }
 
     &:nth-child(4) {
+        top:15%;
         z-index: 1;
-        -webkit-transform: rotate(-30deg);
+        -webkit-transform: rotate(-15deg);
     }
 
     &:nth-child(5) {
         z-index: 2;
-        -webkit-transform: rotate(15deg);
+        -webkit-transform: rotate(10deg);
+        top: 55%;
     }
 
     &:nth-child(6) {
+        top: 35%;
+        right: 10%;
         z-index: 2;
         -webkit-transform: rotate(-4deg);
     }
 
     &:nth-child(7) {
+        right: 12%;
+        top: 25%;
         z-index: 2;
         -webkit-transform: rotate(4deg);
     }
@@ -57,10 +67,11 @@
         box-shadow: 10px 15px 30px;
         /* Тени, смещение по X и Y, степень размытия,цвет */
     }
+
 }
 
 @media (max-width: 768px) {
-    .collage {
-    margin-top: 5rem;
-}
+    .collage__img {
+        width: 50%;
+    }
 }

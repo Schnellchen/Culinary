@@ -31,9 +31,12 @@ body {
   border-color: #a02a63; }
 
 .content {
+  margin-top: 5rem;
   display: flex;
   min-height: 1200px;
-  justify-content: center; }
+  height: 1px;
+  justify-content: center;
+  align-items: flex-start; }
 
 .page-footer {
   background: #ffa258; }
@@ -42,6 +45,9 @@ body {
   float: right; }
 
 @media (max-width: 768px) {
+  .content {
+    margin-top: 1rem; }
+
   .form-control {
     width: 80%;
     margin: auto; }

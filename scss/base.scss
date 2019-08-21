@@ -53,9 +53,12 @@ body {
 }
 
 .content {
+    margin-top: 5rem;
     display: flex;
     min-height: 1200px;
+    height: 1px;
     justify-content: center;
+    align-items: flex-start;
 }
 
 .page-footer {
@@ -66,6 +69,10 @@ body {
     float: right;
 }
 @media (max-width: 768px) {
+    
+    .content {
+        margin-top: 1rem;
+    }
     
     .form-control {
         width: 80%;
