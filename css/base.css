@@ -1,5 +1,16 @@
+@charset "UTF-8";
 body {
   background: #fff7c2; }
+
+h1,
+h2,
+p,
+ul li,
+a,
+b {
+  word-wrap: break-word;
+  /* ╨Я╨╡╤А╨╡╨╜╨╛╤Б ╨┤╨╗╨╕╨╜╨╜╤Л╤Е ╤Б╨╗╨╛╨▓ */
+  font-family: Georgia, "Times New Roman", serif; }
 
 .navbar {
   background: #ffa258;
@@ -33,10 +44,11 @@ body {
 .content {
   margin-top: 5rem;
   display: flex;
+  flex-direction: column;
   min-height: 1200px;
   height: 1px;
-  justify-content: center;
-  align-items: flex-start; }
+  position: relative;
+  align-items: center; }
 
 .page-footer {
   background: #ffa258; }

@@ -1,9 +1,18 @@
+.greetings {
+    display: flex;
+    
+    .greetings__item {
+        font-family:  "Bradley Hand",cursive;
+        font-size: 3rem;
+    }
+}
+
 .collage {
     display: flex;
     width: 100%;
     justify-content: center;
-    height:50rem;
-    background: black;
+    height:60%;
+    position: relative; 
 }
 
 .collage__img {
@@ -30,6 +39,7 @@
     &:nth-child(3) {
         -webkit-transform: rotate(-8deg);
         top: 28%;
+        z-index: 2;
     }
 
     &:nth-child(4) {
@@ -39,9 +49,9 @@
     }
 
     &:nth-child(5) {
-        z-index: 2;
+        z-index: 3;
         -webkit-transform: rotate(10deg);
-        top: 55%;
+        top: 45%;
     }
 
     &:nth-child(6) {
@@ -70,8 +80,39 @@
 
 }
 
-@media (max-width: 768px) {
+.agitation {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+    .agitation__col-left, .agitation__col-mid, .agitation__col-right  {
+        width: 33%;
+        justify-content: center;
+        border: 1px solid black;
+    }
+}
+
+@media (max-width: 768px) and (min-width:575px){
     .collage__img {
-        width: 50%;
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .agitation__col-left {
+        display: none;
+    } 
+    .agitation__col-mid {
+        width: 100%;
+    } 
+    .agitation__col-right {
+        display: none;
+    }
+}
+
+@media (max-width:575px) {
+    
+    .collage__img {
+        width: 45%;
     }
 }

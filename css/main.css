@@ -1,10 +1,16 @@
 @charset "UTF-8";
+.greetings {
+  display: flex; }
+  .greetings .greetings__item {
+    font-family: "Bradley Hand",cursive;
+    font-size: 3rem; }
+
 .collage {
   display: flex;
   width: 100%;
   justify-content: center;
-  height: 50rem;
-  background: black; }
+  height: 60%;
+  position: relative; }
 
 .collage__img {
   width: 25%;
@@ -24,15 +30,16 @@
     -webkit-transform: rotate(-18deg); }
   .collage__img:nth-child(3) {
     -webkit-transform: rotate(-8deg);
-    top: 28%; }
+    top: 28%;
+    z-index: 2; }
   .collage__img:nth-child(4) {
     top: 15%;
     z-index: 1;
     -webkit-transform: rotate(-15deg); }
   .collage__img:nth-child(5) {
-    z-index: 2;
+    z-index: 3;
     -webkit-transform: rotate(10deg);
-    top: 55%; }
+    top: 45%; }
   .collage__img:nth-child(6) {
     top: 35%;
     right: 10%;
@@ -52,8 +59,29 @@
     box-shadow: 10px 15px 30px;
     /* ╨в╨╡╨╜╨╕, ╤Б╨╝╨╡╤Й╨╡╨╜╨╕╨╡ ╨┐╨╛ X ╨╕ Y, ╤Б╤В╨╡╨┐╨╡╨╜╤М ╤А╨░╨╖╨╝╤Л╤В╨╕╤П,╤Ж╨▓╨╡╤В */ }
 
-@media (max-width: 768px) {
+.agitation {
+  display: flex;
+  flex-direction: row;
+  width: 100%; }
+  .agitation .agitation__col-left, .agitation .agitation__col-mid, .agitation .agitation__col-right {
+    width: 33%;
+    justify-content: center;
+    border: 1px solid black; }
+
+@media (max-width: 768px) and (min-width: 575px) {
   .collage__img {
-    width: 50%; } }
+    width: 30%; } }
+@media (max-width: 768px) {
+  .agitation__col-left {
+    display: none; }
+
+  .agitation__col-mid {
+    width: 100%; }
+
+  .agitation__col-right {
+    display: none; } }
+@media (max-width: 575px) {
+  .collage__img {
+    width: 45%; } }
 
 /*# sourceMappingURL=main.css.map */
