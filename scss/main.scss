@@ -11,8 +11,9 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    height:60%;
+    height:80%;
     position: relative; 
+    background: black;
 }
 
 .collage__img {
@@ -85,7 +86,10 @@
     flex-direction: row;
     width: 100%;
     position: relative;
-    justify-content: center;    
+    justify-content: center;
+    min-height: 400px;
+    height: 1px;
+    margin-top: 100px;
 }
 
 .agitation__col-left, .agitation__col-mid, .agitation__col-right  {
@@ -98,6 +102,12 @@
         font-family:  "Bradley Hand",cursive;
         text-align: center;
     }
+
+.agitation__img {
+    display: flex;
+    width: 100%;
+    object-fit: fill;
+}
 
 @media (max-width: 768px) and (min-width:575px){
     .collage__img {
