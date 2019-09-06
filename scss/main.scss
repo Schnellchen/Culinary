@@ -11,7 +11,7 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    height:80%;
+    height:600px;
     position: relative; 
     background: black;
 }
@@ -87,26 +87,78 @@
     width: 100%;
     position: relative;
     justify-content: center;
-    min-height: 400px;
-    height: 1px;
-    margin-top: 100px;
+    top: 10px;
 }
 
 .agitation__col-left, .agitation__col-mid, .agitation__col-right  {
         width: 33%;
+        min-height: 400px;
         justify-content: center;
         border: 1px solid black;  
+    position: relative;
+    overflow: hidden;
     }
     
     .agitation__header {
         font-family:  "Bradley Hand",cursive;
         text-align: center;
+        display: none;
     }
+
+.agitation__list {
+    display: none;
+}
+
 
 .agitation__img {
     display: flex;
     width: 100%;
-    object-fit: fill;
+    position: absolute;
+}
+
+#cook2 {
+    left: -100%;
+}
+
+#cook3 {
+    right: -100%;
+}
+
+.actions {
+    position: relative;
+    height: 400px;
+    display: flex;
+    width: 600px;
+    flex-direction: column;
+    
+}
+
+.actions__row {
+    display: flex;
+    height: 200px;
+    width: 100%;
+    flex-direction: row;
+}
+
+.actions__col-left {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    border: 1px solid black;
+    
+}
+
+.actions__col-right {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+@media (min-width: 1600px) {
+    .collage {
+        height: 700px;
+    }
 }
 
 @media (max-width: 768px) and (min-width:575px){
@@ -116,6 +168,11 @@
 }
 
 @media (max-width: 768px) {
+    
+    .collage {
+        height: 400px;
+    }
+    
     .agitation__col-left {
         display: none;
     } 

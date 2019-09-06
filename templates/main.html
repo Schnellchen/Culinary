@@ -5,10 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="/js/t3est.js"></script>
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/animate.css">
@@ -16,52 +17,52 @@
 <title>Главная</title>
 
 <body>
-    <div class="wrapper">
-        <header class="header">
-            <nav class="navbar navbar-expand-md fixed-top">
-                <a class="navbar-brand" href="#"><img src="/images/logo.png" width="150" height="50" alt="Culinary" /></a>
+    <header class="header">
+        <nav class="navbar navbar-expand-md fixed-top">
+            <a class="navbar-brand" href="#"><img src="/images/logo.png" width="150" height="50" alt="Culinary" /></a>
 
-                <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Домашняя</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Меню</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Обсуждения</a>
-                        </li>
-                    </ul>
-                    <form class="form-inline mr-auto">
-                        <input class="form-control" type="text" placeholder="Поиск..." aria-label="Search">
-                        <button class="btn btn-primary btn-rounded btn-sm my-0 ml-sm-2" type="submit">Найти!</button>
-                    </form>
-                </div>
-            </nav>
-        </header>
-        <div class="content">
-            <div class="greetings">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Домашняя</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Меню</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Обсуждения</a>
+                    </li>
+                </ul>
+                <form class="form-inline mr-auto">
+                    <input class="form-control" type="text" placeholder="Поиск..." aria-label="Search">
+                    <button class="btn btn-primary btn-rounded btn-sm my-0 ml-sm-2" type="submit">Найти!</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <div class="content">
+        <div class="greetings">
             <h1 class="greetings__item">
                 Кулинария - это искусство!
-                </h1>
-            </div>
-            <div class="collage">
-                <img class="collage__img" alt="Dish image" src="/images/dish1.jpg" />
-                <img class="collage__img" alt="Dish image" src="/images/dish2.jpg" />
-                <img class="collage__img" alt="Dish image" src="/images/dish3.jpg" />
-                <img class="collage__img" alt="Dish image" src="/images/dish4.jpg" />
-                <img class="collage__img" alt="Dish image" src="/images/dish5.jpg" />
-                <img class="collage__img" alt="Dish image" src="/images/dish6.jpg" />
-                <img class="collage__img" alt="Dish image" src="/images/dish7.jpg" />
-            </div>
-            <div class="agitation">
-            <div class="agitation__col-left"><img src="/images/cook2.jpg" class="agitation__img"/></div>
-            <div class="agitation__col-mid"><h2 class="agitation__header">Попробуйте!</h2>
+            </h1>
+        </div>
+        <div class="collage">
+            <img class="collage__img" alt="Dish image" src="/images/dish1.jpg" />
+            <img class="collage__img" alt="Dish image" src="/images/dish2.jpg" />
+            <img class="collage__img" alt="Dish image" src="/images/dish3.jpg" />
+            <img class="collage__img" alt="Dish image" src="/images/dish4.jpg" />
+            <img class="collage__img" alt="Dish image" src="/images/dish5.jpg" />
+            <img class="collage__img" alt="Dish image" src="/images/dish6.jpg" />
+            <img class="collage__img" alt="Dish image" src="/images/dish7.jpg" />
+        </div>
+        <div class="agitation">
+            <div class="agitation__col-left"><img src="/images/cook2.jpg" id="cook2" class="agitation__img" /></div>
+            <div class="agitation__col-mid">
+                <h2 class="agitation__header">Попробуйте!</h2>
                 <ul class="agitation__list">
                     <li>
                         <p class="agitation__text">Ощутить себя героем сериала "Кухня ®"</p>
@@ -79,10 +80,28 @@
                         <p class="agitation__text">Быть крутым как повар слева или как повар_есса с_права!</p>
                     </li>
                 </ul>
+            </div>
+            <div class="agitation__col-right"><img src="/images/cook3.jpg" id="cook3" class="agitation__img" /></div>
+        </div>
+        <div class="actions">
+            <div class="actions__row">
+                <div class="actions__col-left">
+                    1
                 </div>
-            <div class="agitation__col-right"><img src="/images/cook3.jpg" class="agitation__img"/></div>
+                <div class="actions__col-right">
+                    2
+                </div>
+            </div>
+            <div class="actions__row">
+                <div class="actions__col-left">
+                    3
+                </div>
+                <div class="actions__col-right">
+                    4
+                </div>
             </div>
         </div>
+    </div>
     <footer class="footer mt-5">
         <div class="page-footer font-small">
 
@@ -128,7 +147,6 @@
             <!-- Copyright -->
         </div>
     </footer>
-    </div>
 </body>
 
 </html>

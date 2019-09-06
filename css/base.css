@@ -9,7 +9,7 @@ ul li,
 a,
 b {
   word-wrap: break-word;
-  /* ╨Я╨╡╤А╨╡╨╜╨╛╤Б ╨┤╨╗╨╕╨╜╨╜╤Л╤Е ╤Б╨╗╨╛╨▓ */
+  /* Перенос длинных слов */
   font-family: Georgia, "Times New Roman", serif; }
 
 .navbar {
@@ -46,7 +46,7 @@ b {
   display: flex;
   flex-direction: column;
   min-height: 1200px;
-  height: 1px;
+  height: auto;
   position: relative;
   align-items: center; }
 

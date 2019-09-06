@@ -1,0 +1,28 @@
+<html>
+<head>
+<style type="text/css">
+#par1
+{
+position:relative;
+}
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script type="text/javascript"> 
+$(document).ready(function(){
+
+   $("body").click(function(){
+      $("p").animate({fontSize:20},500);
+      $("p").animate({top:220},500);
+      $("p").animate({fontSize:"1em"},500);
+      $("p").animate({left:320},500);
+      $("p").animate({top:0,left:0},500);
+   });
+
+});
+</script> 
+</head>
+<body>
+<input id="but1" type="button" value="Начать анимацию" />
+<p id="par1">Это абзац, к которому будет применена анимация.</p>
+</body>
+</html>
